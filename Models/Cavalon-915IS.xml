@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>Cavalon-915IS.ac</path>
+  
+  
+	<nasal>
+        <load>
+            var livery_update = aircraft.livery_update.new("Aircraft/Cavalon-915IS/Models/Liveries", 10);
+        </load>
+
+        <unload>
+            livery_update.stop();
+        </unload>
+  </nasal>
+
+	
+    <animation>
+    <object-name>propeller</object-name>
+    
+    <object-name>rotorMiddle</object-name>
+    <object-name>rotorBlade1F</object-name>
+    <object-name>rotorBlade2B</object-name>
+
+    <object-name>rudder</object-name>
+    <object-name>controlstick</object-name>
+    <object-name>controlstick_brake</object-name>
+    <object-name>controlstick2</object-name>
+    <object-name>controlstick_brake2</object-name>
+    
+    <object-name>pedalL</object-name>
+    <object-name>pedalR</object-name>
+    <object-name>rudder</object-name>
+    
+    <object-name>gearF</object-name>
+    <object-name>gearFLeg</object-name>
+    <object-name>gearFLegUp</object-name>
+    
+    <object-name>gearL</object-name>
+    <object-name>gearLLeg</object-name>
+    <object-name>gearR</object-name>
+    <object-name>gearRLeg</object-name>
+    <object-name>MudguardL</object-name>
+    <object-name>MudguardR</object-name>
+
+    <object-name>rotorHead</object-name>
+    <object-name>rotorPitchBase</object-name>
+    <object-name>rotorYawBase</object-name>
+   
+    <object-name>rotorLinkL</object-name>
+    <object-name>rotorLinkR</object-name>
+    <object-name>rotorLinkPre</object-name>
+
+    <object-name>throttle</object-name>
+	  <object-name>prerotator</object-name>
+	
+	  <object-name>rotorBlade1Fblur</object-name>
+	  <object-name>rotorBlade2Bblur</object-name>
+	  <object-name>propellerblur</object-name>	
+	
+  </animation>
+  
+<effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>Glass</object-name>
+  <object-name>DoorGlass</object-name>
+	<object-name>propellerblur</object-name>
+	<object-name>rotorBlade1Fblur</object-name>
+	<object-name>rotorBlade2Bblur</object-name>
+	
+	<object-name>rotorBlade1FblurHigh</object-name>
+	<object-name>rotorBlade2BblurHigh</object-name>
+	<object-name>rotorBlade1FblurHigh2</object-name>
+	<object-name>rotorBlade2BblurHigh2</object-name>
+	
+</effect>
+
+<effect>
+	<inherits-from>Aircraft/Cavalon-915IS/Models/Effects/bumpspec</inherits-from>
+	 <object-name>Fuselage</object-name>
+  <object-name>Mast</object-name>
+  <object-name>Door</object-name>
+  <object-name>Tail</object-name>
+  <object-name>rudder</object-name>
+  <object-name>rudder</object-name>
+  <object-name>MudguardF</object-name>
+  <object-name>MudguardL</object-name>
+  <object-name>MudguardR</object-name>
+  <object-name>gearRLeg</object-name>
+  <object-name>gearLLeg</object-name>
+  <object-name>TailBoom</object-name>
+</effect>
+
+
+<animation>
+    <type>rotate</type>
+    <object-name>throttle</object-name>
+    <object-name>prerotator</object-name>
+	  <property>/controls/engines/engine[0]/throttle</property>
+    <factor> 50 </factor>
+    <center>
+      <x-m> -0.710676 </x-m>
+      <y-m> -0.000404 </y-m>
+      <z-m> 0.630865 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  
+<animation>
+  <type>spin</type>
+ <object-name>propeller</object-name>
+   <condition>
+       <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1000.000</value>
+      </less-than>
+       </condition>
+ <property>engines/engine[0]/rpm</property>
+  <factor>0.05</factor>
+  <center>
+      <x-m> 0.949308 </x-m>
+      <y-m> -0.000776 </y-m>
+      <z-m> 1.31419 </z-m>
+    </center>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+ </animation> 
+
+<animation>
+  <type>spin</type>
+ <object-name>propeller</object-name>
+   <condition>
+    <and>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1000.0001</value>
+      </greater-than>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1600.000</value>
+      </less-than>
+    </and>
+    </condition>
+     <property>engines/engine[0]/rpm</property>
+  <factor>1</factor>
+  <center>
+      <x-m> 0.949308 </x-m>
+      <y-m> -0.000776 </y-m>
+      <z-m> 1.31419 </z-m>
+    </center>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+ </animation> 
+
+
+<animation>
+  <type>spin</type>
+ <object-name>propeller</object-name>
+   <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1600.0001</value>
+      </greater-than>
+    </condition>
+     <property>engines/engine[0]/rpm</property>
+  <factor>0.02</factor>
+  <center>
+      <x-m> 0.949308 </x-m>
+      <y-m> -0.000776 </y-m>
+      <z-m> 1.31419 </z-m>
+    </center>
+    <axis>
+      <x>  -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+ </animation> 
+ 
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>controlstick</object-name>
+    <object-name>controlstick_brake</object-name>
+    <property>rotors/main/tilt/roll-deg</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m>  -0.788543 </x-m>
+      <y-m> 0.223785 </y-m>
+      <z-m> 0.422161 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>controlstick</object-name>
+    <object-name>controlstick_brake</object-name>
+    <property>rotors/main/tilt/pitch-deg</property>
+    <factor> 1 </factor>
+    <offset-deg>-16</offset-deg>
+    <center>
+      <x-m>  -0.788543 </x-m>
+      <y-m> 0.223785 </y-m>
+      <z-m> 0.422161 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>controlstick2</object-name>
+    <object-name>controlstick_brake2</object-name>
+    <property>rotors/main/tilt/roll-deg</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -0.788543 </x-m>
+      <y-m> -0.223785 </y-m>
+      <z-m> 0.422161 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>controlstick2</object-name>
+    <object-name>controlstick_brake2</object-name>
+    <property>rotors/main/tilt/pitch-deg</property>
+    <factor> 1 </factor>
+    <offset-deg>-16</offset-deg>
+    <center>
+      <x-m> -0.788543 </x-m>
+      <y-m> -0.223785 </y-m>
+      <z-m> 0.422161 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorMiddle</object-name>
+    <object-name>rotorBlade1F</object-name>
+    <object-name>rotorBlade2B</object-name>
+	
+	  <object-name>rotorBlade1Fblur</object-name>
+	  <object-name>rotorBlade2Bblur</object-name>
+	
+	  <object-name>rotorBlade1FLow</object-name>
+	  <object-name>rotorBlade2BLow</object-name>
+	  <object-name>rotorBlade1FblurHigh</object-name>
+	  <object-name>rotorBlade2BblurHigh</object-name>
+	  <object-name>rotorBlade1FblurHigh2</object-name>
+	  <object-name>rotorBlade2BblurHigh2</object-name>
+	
+    <object-name>rotorHead</object-name>
+    <object-name>rotorPitchBase</object-name>
+    <object-name>rotorYawBase</object-name>
+    <property>rotors/main/tilt/roll-deg</property>
+    <factor> -1 </factor>
+    <axis>
+      <x1-m> 0.018581 	</x1-m>
+      <y1-m> 0.000652	</y1-m>
+      <z1-m> 2.51268	</z1-m>
+      <x2-m> -0.120481	</x2-m>
+      <y2-m> 0.000656 	</y2-m>
+      <z2-m>  2.54097	</z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorMiddle</object-name>
+    <object-name>rotorBlade1F</object-name>
+    <object-name>rotorBlade2B</object-name>
+	
+	  <object-name>rotorBlade1Fblur</object-name>
+	  <object-name>rotorBlade2Bblur</object-name>
+	
+	  <object-name>rotorBlade1FLow</object-name>
+	  <object-name>rotorBlade2BLow</object-name>
+	  <object-name>rotorBlade1FblurHigh</object-name>
+	  <object-name>rotorBlade2BblurHigh</object-name>
+	  <object-name>rotorBlade1FblurHigh2</object-name>
+	  <object-name>rotorBlade2BblurHigh2</object-name>
+	
+    <object-name>rotorHead</object-name>
+    <object-name>rotorPitchBase</object-name>
+
+    <property>rotors/main/tilt/pitch-deg</property>
+    <factor> -1 </factor>
+    <center>
+      <x-m>-0.045834	</x-m>
+	    <y-m> 0.0000	</y-m>
+	    <z-m>2.56958 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>rotorLinkL</object-name>
+    <property>rotors/main/tilt/roll-deg</property>
+    <factor>-0.0035</factor>
+    <axis>
+      <x1-m>0.021948 </x1-m>
+      <y1-m>-0.040111 </y1-m>
+      <z1-m> 2.20615 </z1-m>
+      <x2-m>0.014903 </x2-m>
+      <y2-m>-0.135196 </y2-m>
+      <z2-m>2.4787 </z2-m>
+    </axis>
+  </animation>
+
+
+  <!--<animation>
+    <type>translate</type>
+    <object-name>rotorLinkR</object-name>
+    <property>rotors/main/tilt/pitch-deg</property>
+    <factor>-0.0035 </factor>
+    <axis>
+      <x1-m> -0.2452</x1-m>
+      <y1-m>0.04034</y1-m>
+      <z1-m> -0.2671</z1-m>
+      <x2-m> 0.3014</x2-m>
+      <y2-m>0.1265</y2-m>
+      <z2-m>1.0638</z2-m>
+    </axis>
+</animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorLinkR</object-name>
+    <object-name>rotorLinkL</object-name>
+    <property>rotors/main/tilt/pitch-deg</property>
+    <factor>-0.01 </factor>
+    <axis>
+      <x1-m> -0.2452</x1-m>
+      <y1-m>0.04034</y1-m>
+      <z1-m> -0.2671</z1-m>
+      <x2-m> -0.2452</x2-m>
+      <y2-m>-0.04034</y2-m>
+      <z2-m> -0.2671</z2-m>
+    </axis>
+</animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorLinkR</object-name>
+    <object-name>rotorLinkL</object-name>
+    <property>rotors/main/tilt/pitch-deg</property>
+    <factor>-0.01 </factor>
+    <axis>
+      <x1-m> -0.2452</x1-m>
+      <y1-m>0.04034</y1-m>
+      <z1-m> -0.2671</z1-m>
+      <x2-m> -0.2452</x2-m>
+      <y2-m>-0.04034</y2-m>
+      <z2-m> -0.2671</z2-m>
+    </axis>
+</animation>
+
+
+   <animation>
+    <type>translate</type>
+    <object-name>rotorLinkR</object-name>
+    <property>rotors/main/tilt/roll-deg</property>
+    <factor>0.0028</factor>
+    <axis>
+	<x>  0 </x>
+	<y>  0 </y>
+	<z>  1 </z>
+    </axis>
+</animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>rotorLinkL</object-name>
+   <property>rotors/main/tilt/roll-deg</property>
+    <factor>-0.0028</factor>
+    <axis>
+	<x>  0 </x>
+	<y>  0 </y>
+	<z>  1 </z>
+    </axis>
+  </animation> -->
+  
+  
+
+    <animation>
+    <type>rotate</type>
+    <object-name>rotorLinkPre</object-name>
+	  <property>rotors/main/tilt/roll-deg</property>
+    <factor> 0.2</factor>
+    <center>
+      <x-m>  0.129436 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  2.40541 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorLinkPre</object-name>
+	  <property>rotors/main/tilt/pitch-deg</property>
+    <factor> 0.2</factor>
+    <center>
+      <x-m>  0.129436 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  2.40541 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorLinkL</object-name>
+	  <property>rotors/main/tilt/roll-deg</property>
+    <factor> 0.2</factor>
+    <center>
+      <x-m>  0.015454 </x-m>
+      <y-m>  -0.159095 </y-m>
+      <z-m>  2.54605 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorLinkL</object-name>
+	  <property>rotors/main/tilt/pitch-deg</property>
+    <factor> 0.1</factor>
+    <center>
+      <x-m>  0.015454 </x-m>
+      <y-m>  -0.159095 </y-m>
+      <z-m>  2.54605 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+
+ <animation>
+	<type>spin</type>
+	<object-name>rotorMiddle</object-name>
+	<object-name>rotorBlade1F</object-name>
+	<object-name>rotorBlade2B</object-name>
+	
+	<object-name>rotorBlade1Fblur</object-name>
+	<object-name>rotorBlade2Bblur</object-name>
+	
+	<object-name>rotorBlade1FLow</object-name>
+	<object-name>rotorBlade2BLow</object-name>
+	<object-name>rotorBlade1FblurHigh</object-name>
+	<object-name>rotorBlade2BblurHigh</object-name>
+	<object-name>rotorBlade1FblurHigh2</object-name>
+	<object-name>rotorBlade2BblurHigh2</object-name>
+	
+	<property>rotors/main/rpm</property>
+	<factor>1</factor>
+	<offset-deg>0</offset-deg>
+	<axis>
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+	<center>
+		<x-m>-0.003893	</x-m>
+	  <y-m>-0.0000	</y-m>
+	  <z-m>2.62569 </z-m>
+	</center>
+</animation>
+
+
+<animation>
+  <type>select</type>
+	<object-name>rotorBlade1FLow</object-name>
+	<object-name>rotorBlade2BLow</object-name>
+    <condition>
+      <less-than>
+        <property>rotors/main/rpm</property>
+        <value>100.001</value>
+      </less-than> 
+    </condition>
+</animation>
+  
+<animation>
+    <type>select</type>
+	  <object-name>rotorBlade1F</object-name>
+	  <object-name>rotorBlade2B</object-name>
+    <object-name>rotorBlade1Fblur</object-name>
+	  <object-name>rotorBlade2Bblur</object-name>
+	  <condition>
+	    <and>
+        <greater-than>
+          <property>rotors/main/rpm</property>
+          <value>100</value>
+        </greater-than>
+	      <less-than>
+          <property>rotors/main/rpm</property>
+          <value>250.001</value>
+        </less-than>
+      </and>
+    </condition>
+</animation>
+  
+<animation>
+    <type>select</type>
+	  <object-name>rotorBlade1FblurHigh</object-name>
+	  <object-name>rotorBlade2BblurHigh</object-name>
+    <condition>
+	    <and>
+        <greater-than>
+          <property>rotors/main/rpm</property>
+          <value>250</value>
+        </greater-than>
+	      <less-than>
+          <property>rotors/main/rpm</property>
+          <value>400.001</value>
+        </less-than>
+      </and>
+	  </condition>
+</animation>
+  
+<animation>
+    <type>select</type>
+	<object-name>rotorBlade1FblurHigh2</object-name>
+	<object-name>rotorBlade2BblurHigh2</object-name>
+    <condition>
+      <greater-than>
+        <property>rotors/main/rpm</property>
+        <value>400</value>
+      </greater-than>
+    </condition>
+</animation>
+
+ 
+<animation>
+    <type>select</type>
+	<object-name>propellerblur</object-name>	
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1500</value>
+      </greater-than>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>propeller</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>2500.001</value>
+      </less-than>
+    </condition>
+</animation>
+  
+
+<!-- rudder -->
+
+ <animation>
+    <type>rotate</type>
+    <object-name>rudder</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 40</factor>
+    <center>
+      <x-m> 2.23128 </x-m>
+      <y-m>  0.000008 </y-m>
+      <z-m> -0.963782 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+
+<animation>
+    <type>rotate</type>
+    <object-name>pedalL</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+       <x-m> -1.32431 </x-m>
+      <y-m>0.140566 </y-m>
+      <z-m> 0.547405 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pedalR</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+      <x-m> -1.32431 </x-m>
+      <y-m>0.140566 </y-m>
+      <z-m> 0.547405 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>gearF</object-name>
+    <object-name>gearFLeg</object-name>
+    <object-name>gearFLegUp</object-name>
+    <object-name>MudguardF</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+      <x-m> -1.62177</x-m>
+      <y-m> 0.0000</y-m>
+      <z-m> 0.468761</z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+  
+  
+  
+   <animation>
+    <type>rotate</type>
+    <object-name>gearL</object-name>
+    <object-name>gearLLeg</object-name>
+    <object-name>MudguardL</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <center>
+      <x-m> 0.303644 </x-m>
+      <y-m> -0.0963 </y-m>
+      <z-m> 0.573941 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+	<interpolation>
+		<entry>
+		<ind> 0.0</ind>
+		<dep> -4.0</dep>
+		</entry>
+		<entry>
+		<ind> 0.01</ind>
+		<dep> -1.0</dep>
+		</entry>
+		<entry>
+		<ind> 1.0</ind>
+		<dep> 0.0</dep>
+		</entry>
+	</interpolation>
+  </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>gearR</object-name>
+    <object-name>gearRLeg</object-name>
+    <object-name>MudguardR</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <center>
+      <x-m> 0.303644 </x-m>
+      <y-m> 0.0963 </y-m>
+      <z-m> 0.573941 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+	<interpolation>
+		<entry>
+		<ind> 0.0</ind>
+		<dep> -4.0</dep>
+		</entry>
+		<entry>
+		<ind> 0.01</ind>
+		<dep> -1.0</dep>
+		</entry>
+		<entry>
+		<ind> 1.0</ind>
+		<dep> 0.0</dep>
+		</entry>
+	</interpolation>
+  </animation>
+  
+  
+<!-- gears -->
+
+  <animation>
+    <type>spin</type>
+    <object-name>gearF</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m>-1.62473</x-m>
+      <y-m> 0.000000 </y-m>
+      <z-m> 0.175733 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>spin</type>
+    <object-name>gearR</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+	        <x-m> 0.377129 </x-m>
+          <y-m> 0.747197 </y-m>
+          <z-m> 0.200537 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>gearL</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+	        <x-m> 0.377129 </x-m>
+          <y-m> -0.747197 </y-m>
+          <z-m> 0.200537 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>noshadow</type>
+	<object-name>rotorBlade1Fblur</object-name>
+	<object-name>rotorBlade2Bblur</object-name>
+	<object-name>propellerblur</object-name>	
+  </animation>
+ 
+
+	<model>
+		<path>Aircraft/Cavalon-915IS/Models/Effects/shadow.xml</path>
+	</model>
+
+ 
+    <model>
+        <name>panel1</name>
+        <path>Aircraft/Cavalon-915IS/Models/panel1.xml</path>
+        <offsets>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0.14</z-m>
+            <pitch-deg>-8</pitch-deg>
+        </offsets>
+    </model>
+
+   <model>
+    <name>pilot</name>
+    <path>Aircraft/Cavalon-915IS/Models/pilot.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.23445</y-m>
+      <z-m>0.791837</z-m>
+    </offsets>
+  </model>
+  
+ 
+</PropertyList>
+
