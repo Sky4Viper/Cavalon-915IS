@@ -2,7 +2,7 @@
 Cavalon-915IS autgyro
 For FlightGear   
 Release 0.90 (Beta) 
-Tested on FG v2.10.0.
+Tested on FG v2020.3.13.
 
 Author: Sergei "Skydive" Solyshko
 
@@ -12,8 +12,7 @@ edinhozic@hotmail.com
 
 
 INTRODUCTION
-The Autogyro Cavalon is a German autogyro, designed and produced by AutoGyro GmbH of
-Hildesheim.
+The Autogyro Cavalon is a German autogyro, designed and produced by AutoGyro GmbH of Hildesheim.
 It was introduced at the 2011 Aero show in Friedrichshafen.
 The aircraft is supplied as a complete ready-to-fly-aircraft
 
