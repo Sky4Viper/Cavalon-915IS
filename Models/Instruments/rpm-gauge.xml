@@ -22,13 +22,13 @@
         <property>/engines/engine/rpm</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
-            <entry><ind>500.0</ind><dep>35.0</dep></entry>
-            <entry><ind>1000.0</ind><dep>68.0</dep></entry>
-            <entry><ind>1500.0</ind><dep>104.0</dep></entry>
-            <entry><ind>2000.0</ind><dep>140.0</dep></entry>
-            <entry><ind>2500.0</ind><dep>175.0</dep></entry>
-            <entry><ind>3000.0</ind><dep>211.0</dep></entry>
-            <entry><ind>3500.0</ind><dep>245.0</dep></entry>
+            <entry><ind>1000.0</ind><dep>35.0</dep></entry>
+            <entry><ind>2000.0</ind><dep>68.0</dep></entry>
+            <entry><ind>3000.0</ind><dep>104.0</dep></entry>
+            <entry><ind>4000.0</ind><dep>140.0</dep></entry>
+            <entry><ind>5000.0</ind><dep>175.0</dep></entry>
+            <entry><ind>6000.0</ind><dep>211.0</dep></entry>
+            <entry><ind>7000.0</ind><dep>245.0</dep></entry>
         </interpolation>
         <axis>
             <x>-1</x>

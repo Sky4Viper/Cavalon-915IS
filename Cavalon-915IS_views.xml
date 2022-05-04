@@ -25,9 +25,9 @@
       <!-- <x-offset-m archive="y">  0.000 </x-offset-m>	
       <y-offset-m archive="y">  1.2649 </y-offset-m>
       <z-offset-m archive="y"> -0.253 </z-offset-m>	 -->
-      <x-offset-m archive="y">  0.195186 </x-offset-m>	<!--right-->
-      <y-offset-m archive="y">  1.24422 </y-offset-m>	<!--up-->
-      <z-offset-m archive="y"> -0.289179 </z-offset-m>	<!--back 0.553-->
+      <x-offset-m archive="y">  0.235186 </x-offset-m>	<!--right-->
+      <y-offset-m archive="y">  1.27422 </y-offset-m>	<!--up-->
+      <z-offset-m archive="y"> -0.199179 </z-offset-m>	<!--back 0.553-->
       <pitch-offset-deg> 0 </pitch-offset-deg>
       <default-field-of-view-deg> 76 </default-field-of-view-deg>
     </config>

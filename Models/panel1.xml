@@ -6,21 +6,54 @@
     <name>Compass2</name>
         <path>Aircraft/Cavalon-915IS/Models/Instruments/comp.xml</path>
         <offsets>
-           <x-m>-1.26291</x-m>
+           <x-m>-1.31771</x-m>
             <y-m>0.00000</y-m>
-            <z-m>1.17123</z-m>
-            <pitch-deg>-7.6</pitch-deg>
+            <z-m>1.13708</z-m>
+            <pitch-deg>-6.95</pitch-deg>
         </offsets>
     </model>
 
     <model>
+        <name>Airspeed MPH 1</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/asi.xml</path>
+        <offsets>
+            <x-m>-1.24018</x-m>
+            <y-m>0.00000</y-m>
+            <z-m>1.026536</z-m>
+               <pitch-deg>-23.7</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Altimeter 1</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/altimeter.xml</path>
+        <offsets>
+            <x-m>-1.22518</x-m>
+            <y-m>0.00000</y-m>
+            <z-m>0.952486</z-m>
+               <pitch-deg>-23.7</pitch-deg>
+        </offsets>
+    </model>
+
+    <!-- <model>
         <name>Airspeed MPH</name>
         <path>Aircraft/Cavalon-915IS/Models/Instruments/asi.xml</path>
         <offsets>
-            <x-m>-1.18946</x-m>
-            <y-m>-0.035000</y-m>
-            <z-m>1.03723</z-m>
-               <pitch-deg>0</pitch-deg>
+            <x-m>-1.19018</x-m>
+            <y-m>0.08000</y-m>
+            <z-m>0.877536</z-m>
+               <pitch-deg>-23.7</pitch-deg>
+        </offsets>
+    </model> -->
+
+    <model>
+        <name>RPM</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/rpm-gauge.xml</path>
+        <offsets>
+			<x-m>-1.19618</x-m>
+            <y-m>0.08250</y-m>
+            <z-m>0.873536</z-m>
+               <pitch-deg>-23.7</pitch-deg>
         </offsets>
     </model>
 
@@ -28,48 +61,110 @@
         <name>Vertical Speed</name>
         <path>Aircraft/Cavalon-915IS/Models/Instruments/vsi-gauge.xml</path>
         <offsets>
-            <x-m>-1.18946</x-m>
-            <y-m>0.035000</y-m>
-            <z-m>1.03723</z-m>
-               <pitch-deg>0</pitch-deg>
+            <x-m>-1.19618</x-m>
+            <y-m>0.00000</y-m>
+            <z-m>0.873536</z-m>
+               <pitch-deg>-23.7</pitch-deg>
         </offsets>
     </model>
 
-    <model>
+    <!-- <model>
         <name>Altimeter</name>
         <path>Aircraft/Cavalon-915IS/Models/Instruments/altimeter.xml</path>
         <offsets>
-            <x-m>-1.18946</x-m>
-            <y-m>0.105000</y-m>
-            <z-m>1.03723</z-m>
-               <pitch-deg>0</pitch-deg>
+            <x-m>-1.19018</x-m>
+            <y-m>-0.08000</y-m>
+            <z-m>0.877536</z-m>
+               <pitch-deg>-23.7</pitch-deg>
         </offsets>
-    </model>
-
-    <model>
-        <name>RPM</name>
-        <path>Aircraft/Cavalon-915IS/Models/Instruments/rpm-gauge.xml</path>
-        <offsets>
-			<x-m>-1.18946</x-m>
-            <y-m>0.03500</y-m>
-            <z-m>0.96723</z-m>
-               <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
+    </model> -->
 
     <model>
     <name>RPMRotor</name>
         <path>Aircraft/Cavalon-915IS/Models/Instruments/rpmrotor.xml</path>
         <offsets>
-			<x-m>-1.18946</x-m>
-            <y-m>0.105000</y-m>
-            <z-m>0.96553</z-m>
-               <pitch-deg>0</pitch-deg>
+			<x-m>-1.19618</x-m>
+            <y-m>-0.06000</y-m>
+            <z-m>0.877536</z-m>
+               <pitch-deg>-23.7</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+    <name>Fuel</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/fuel-g.xml</path>
+        <offsets>
+			<x-m>-1.19618</x-m>
+            <y-m>-0.10500</y-m>
+            <z-m>0.877536</z-m>
+               <pitch-deg>-23.7</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+    <name>OilPress</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/oilpress.xml</path>
+        <offsets>
+			<x-m>-1.17304</x-m>
+            <y-m>0.054248</y-m>
+            <z-m>0.814001</z-m>
+               <pitch-deg>-23.7</pitch-deg>
+        </offsets>
+    </model>
+
+    <!-- <model>
+        <name>MFD</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/zkv1000/mfd.xml</path>
+        <offsets>
+            <x-m>-1.22852</x-m>
+            <y-m>0.122694</y-m>
+            <z-m>0.976743</z-m>
+               <pitch-deg>-23.7</pitch-deg>
+        </offsets>
+        <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.696774</x-offset>
+			<y-offset>0.696774</y-offset>
+			<z-offset>0.696774</z-offset>
+			</animation>
+		</overlay>
+    </model>
+
+    <model>
+        <name>PFD</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/zkv1000/pfd.xml</path>
+        <offsets>
+            <x-m>-1.22852</x-m>
+            <y-m>-0.122694</y-m>
+            <z-m>0.976743</z-m>
+               <pitch-deg>-23.7</pitch-deg>
+        </offsets>
+        <overlay>
+			<animation n="101">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.696774</x-offset>
+			<y-offset>0.696774</y-offset>
+			<z-offset>0.696774</z-offset>
+			</animation>
+		</overlay>
+    </model>
+
+    <model>
+    <name>RPMRotor</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/ar-6201/ar-6201.xml</path>
+        <offsets>
+			<x-m>-1.06485</x-m>
+            <y-m>0.069021</y-m>
+            <z-m>0.851283</z-m>
+               <pitch-deg>-23.4</pitch-deg>
         </offsets>
     </model>
 
 
-	  <!-- 
+	 
         
     <model>
     <name>Fuel</name>

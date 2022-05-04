@@ -35,6 +35,24 @@
 		<script>heli.look_up();</script>
 		</binding>
 	</key>
+
+	<key n="100">
+      <name>d</name>
+      <desc>Pilot door</desc>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </key>
+    
+    <key n="68">
+      <name>D</name>
+      <desc>Copilot door</desc>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </key>
 		
 
 </PropertyList>

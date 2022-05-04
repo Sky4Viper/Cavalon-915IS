@@ -7,7 +7,7 @@
   
 	<nasal>
         <load>
-            var livery_update = aircraft.livery_update.new("Aircraft/Cavalon-915IS/Models/Liveries", 10);
+            var livery_update = aircraft.livery_update.new("Aircraft/Cavalon-915IS/Models/Liveries");
         </load>
 
         <unload>
@@ -17,6 +17,10 @@
 
 	
     <animation>
+    <object-name>Fuselage</object-name>
+    <object-name>DoorL</object-name>
+    <object-name>DoorR</object-name>
+
     <object-name>propeller</object-name>
     
     <object-name>rotorMiddle</object-name>
@@ -29,8 +33,10 @@
     <object-name>controlstick2</object-name>
     <object-name>controlstick_brake2</object-name>
     
-    <object-name>pedalL</object-name>
-    <object-name>pedalR</object-name>
+    <object-name>RpedalsL</object-name>
+    <object-name>RpedalsR</object-name>
+    <object-name>LpedalsL</object-name>
+    <object-name>LpedalsR</object-name>
     <object-name>rudder</object-name>
     
     <object-name>gearF</object-name>
@@ -49,7 +55,6 @@
     <object-name>rotorYawBase</object-name>
    
     <object-name>rotorLinkL</object-name>
-    <object-name>rotorLinkR</object-name>
     <object-name>rotorLinkPre</object-name>
 
     <object-name>throttle</object-name>
@@ -60,11 +65,46 @@
 	  <object-name>propellerblur</object-name>	
 	
   </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>Fuselage</object-name>
+    <object-name>Fuselage2</object-name>
+    <object-name>Fuselage3</object-name>
+    <object-name>DoorL</object-name>
+    <object-name>DoorR</object-name>
+    <object-name>TailBoom3</object-name>
+    <object-name>Tail</object-name>
+    <object-name>rudder</object-name>
+    
+    <object-name>MudguardF</object-name>
+    <object-name>MudguardL</object-name>
+    <object-name>MudguardR</object-name>
+
+    <object-name>gearF</object-name>
+    <object-name>gearL</object-name>
+    <object-name>gearR</object-name>
+
+    <object-name>gearLLeg</object-name>
+    <object-name>gearRLeg</object-name>
+
+    <object-name>DoorHinge</object-name>
+
+    <object-name>gearFLegUp</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>Aircraft/Cavalon-915IS/Models/Liveries/body_all.png</texture>	
+	
+  </animation>
   
 <effect>
 	<inherits-from>Effects/model-transparent</inherits-from>
 	<object-name>Glass</object-name>
-  <object-name>DoorGlass</object-name>
+  <object-name>DoorL_glass</object-name>
+  <object-name>DoorR_glass</object-name>
+  <object-name>Headlights_glass</object-name>
+  <object-name>Indicator_glass</object-name>
 	<object-name>propellerblur</object-name>
 	<object-name>rotorBlade1Fblur</object-name>
 	<object-name>rotorBlade2Bblur</object-name>
@@ -79,8 +119,11 @@
 <effect>
 	<inherits-from>Aircraft/Cavalon-915IS/Models/Effects/bumpspec</inherits-from>
 	 <object-name>Fuselage</object-name>
+   <object-name>Fuselage2</object-name>
+   <object-name>Fuselage3</object-name>
   <object-name>Mast</object-name>
-  <object-name>Door</object-name>
+  <object-name>DoorL</object-name>
+  <object-name>DoorR</object-name>
   <object-name>Tail</object-name>
   <object-name>rudder</object-name>
   <object-name>rudder</object-name>
@@ -90,6 +133,7 @@
   <object-name>gearRLeg</object-name>
   <object-name>gearLLeg</object-name>
   <object-name>TailBoom</object-name>
+  <object-name>TailBoom3</object-name>
 </effect>
 
 
@@ -294,6 +338,71 @@
       <z2-m>  2.54097	</z2-m>
     </axis>
   </animation>
+
+  <!-- Doors -->
+
+  <animation>
+    <type>pick</type>
+    <object-name>DoorL_inside</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>DoorL</object-name>
+    <object-name>DoorL_inside</object-name>
+    <object-name>DoorL_glass</object-name>
+    <object-name>DoorHinge2L</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <factor> 85 </factor>
+    <axis>
+      <x1-m> -0.5676 </x1-m>
+      <y1-m> -0.51255 </y1-m>
+      <z1-m> 1.37021 </z1-m>
+      <x2-m> -1.02915 </x2-m>
+      <y2-m> -0.58076 </y2-m>
+      <z2-m> 1.11343 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>DoorR_inside</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>  
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>DoorR</object-name>
+    <object-name>DoorR_inside</object-name>
+    <object-name>DoorR_glass</object-name>
+    <object-name>DoorHinge2R</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> -85 </factor>
+    <axis>
+      <x1-m> -0.5676 </x1-m>
+      <y1-m> 0.51255 </y1-m>
+      <z1-m> 1.37021 </z1-m>
+      <x2-m> -1.02915 </x2-m>
+      <y2-m> 0.58076 </y2-m>
+      <z2-m> 1.11343 </z2-m>
+    </axis>
+  </animation>
+
   
   <animation>
     <type>rotate</type>
@@ -630,13 +739,13 @@
 
 <animation>
     <type>rotate</type>
-    <object-name>pedalL</object-name>
+    <object-name>RpedalsL</object-name>
     <property>surface-positions/rudder-pos-norm</property>
     <factor> 20 </factor>
     <center>
-       <x-m> -1.32431 </x-m>
+       <x-m> -1.34009 </x-m>
       <y-m>0.140566 </y-m>
-      <z-m> 0.547405 </z-m>
+      <z-m> 0.505605 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -647,13 +756,47 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>pedalR</object-name>
+    <object-name>RpedalsR</object-name>
     <property>surface-positions/rudder-pos-norm</property>
     <factor> 20 </factor>
     <center>
-      <x-m> -1.32431 </x-m>
+      <x-m> -1.34009 </x-m>
       <y-m>0.140566 </y-m>
-      <z-m> 0.547405 </z-m>
+      <z-m> 0.505605 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LpedalsL</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+       <x-m> -1.34009 </x-m>
+      <y-m>-0.140566 </y-m>
+      <z-m> 0.505605 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LpedalsR</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
+    <center>
+      <x-m> -1.34009 </x-m>
+      <y-m>-0.140566 </y-m>
+      <z-m> 0.505605 </z-m>
     </center>
     <axis>
       <x>  0 </x>
@@ -823,8 +966,8 @@
         <offsets>
             <x-m>0</x-m>
             <y-m>0</y-m>
-            <z-m>0.14</z-m>
-            <pitch-deg>-8</pitch-deg>
+            <z-m>0</z-m>
+            <pitch-deg>0</pitch-deg>
         </offsets>
     </model>
 
@@ -832,9 +975,9 @@
     <name>pilot</name>
     <path>Aircraft/Cavalon-915IS/Models/pilot.xml</path>
     <offsets>
-      <x-m>0</x-m>
+      <x-m>-0.03</x-m>
       <y-m>0.23445</y-m>
-      <z-m>0.791837</z-m>
+      <z-m>0.761837</z-m>
     </offsets>
   </model>
   

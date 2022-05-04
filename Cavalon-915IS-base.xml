@@ -231,7 +231,7 @@
 	<nasal>
 		 
 	<Cavalon-915IS>
-		<file>Aircraft/Cavalon-915IS/Nasal/Liveries.nas</file>
+		<file>Aircraft/Cavalon-915IS/Nasal/liveries.nas</file>
 	</Cavalon-915IS>
 	
 	<gyro>
@@ -241,6 +241,10 @@
 	<heli>
 		<file>Aircraft/Cavalon-915IS/Nasal/heli.nas</file>
 	</heli>
+
+  <doors>
+      <file>Aircraft/Cavalon-915IS/Nasal/doors.nas</file>
+  </doors>
 	
 	</nasal>
 
