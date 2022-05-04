@@ -98,22 +98,11 @@ Extact and copy to data/Aircraft folder in FlightGear.
 
 LINKS
 http://en.wikipedia.org/wiki/Autogyro
-http://home.icon.fi/~jtki/jt5gyroplan.html
-http://www.icon.fi/~jtki/jt5autogyro.html
+https://autogyronewyork.com/cavalon
+https://github.com/Sky4Viper/Cavalon-915IS
+https://www.auto-gyro.com/chameleon/public/741cd10c-7c2e-ffd8-2f6d-1ceb2e46e430/POH_CV915_1-0_EN.pdf
 
 
 VERSION
 0.90 Beta release
-Finetuned flight model
-More detailed 3d model
-Better cockpit with more and better instruments
-Other smaller fixes
------
-0.85 Alpha release
-Improved flight model
-Fixed gear position
-Added gear animations
-Also other small fixes
------
-0.8 Alpha release
 First release
