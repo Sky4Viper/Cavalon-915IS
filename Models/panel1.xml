@@ -112,6 +112,17 @@
         </offsets>
     </model>
 
+    <model>
+    <name>Magneto</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/magneto.xml</path>
+        <offsets>
+			<x-m>-1.17404</x-m>
+            <y-m>-0.054248</y-m>
+            <z-m>0.815001</z-m>
+               <pitch-deg>-23.7</pitch-deg>
+        </offsets>
+    </model>
+
     <!-- <model>
         <name>MFD</name>
         <path>Aircraft/Cavalon-915IS/Models/Instruments/zkv1000/mfd.xml</path>

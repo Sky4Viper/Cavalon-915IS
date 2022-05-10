@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>mags.ac</path>
+
+  <animation>
+    <object-name>key</object-name>
+    <object-name>magsw</object-name>
+    
+    <object-name>click-L</object-name>
+    <object-name>click-R</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>key</object-name>
+    <object-name>magsw</object-name>
+    <emission>
+      <red>   0.07500 </red>
+      <green> 0.01500 </green>
+      <blue>  0.00001 </blue>
+      <factor-prop>/sim/model/material/instruments/factor</factor-prop>
+    </emission>
+  </animation>
+
+  <!--		magneto switch		-->
+  <animation>
+    <type>pick</type>
+    <object-name>click-L</object-name>
+    <visible>false</visible>
+    <action>
+      <name>decrease mags</name>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/engines/engine/magnetos</property>
+        <step>-3</step>
+        <min>0</min>
+        <max>3</max>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>click-R</object-name>
+    <visible>false</visible>
+    <action>
+      <name>increase mags</name>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/engines/engine/magnetos</property>
+        <step>3</step>
+        <min>0</min>
+        <max>3</max>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch3")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <!--   key animations  -->   
+  <animation>
+    <name>mags-key</name>
+    <type>rotate</type>
+    <object-name>key</object-name>
+    <property>/controls/engines/engine/magnetos</property>
+    <factor> 30 </factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>mags-key</name>
+    <type>rotate</type>
+    <object-name>key</object-name>
+    <property>/controls/engines/engine/starter</property>
+    <factor> 30 </factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+    <condition>
+        <greater-than>
+          <property>/controls/engines/engine/magnetos</property>
+          <value>2</value>
+        </greater-than>
+	      <!-- <less-than>
+          <property>rotors/main/rpm</property>
+          <value>400.001</value>
+        </less-than> -->
+	  </condition>
+  </animation>
+
+  <animation>
+    <name>mags-key</name>
+    <type>rotate</type>
+    <object-name>key</object-name>
+    <property>/controls/engines/engine/starter</property>
+    <factor> 120 </factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+    <condition> 
+	      <less-than>
+          <property>/controls/engines/engine/magnetos</property>
+          <value>3</value>
+        </less-than>
+	  </condition>
+  </animation>
+  
+</PropertyList>

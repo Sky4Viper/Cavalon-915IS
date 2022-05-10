@@ -7,7 +7,7 @@
   
 	<nasal>
         <load>
-            var livery_update = aircraft.livery_update.new("Aircraft/Cavalon-915IS/Models/Liveries");
+            var livery_update = aircraft.livery_update.new("Aircraft/Cavalon-915IS/Models/Liveries", 10);
         </load>
 
         <unload>
@@ -92,6 +92,10 @@
 
     <object-name>gearFLegUp</object-name>
 
+    <object-name>Headlights</object-name>
+
+    <object-name>LightsPost</object-name>
+
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>Aircraft/Cavalon-915IS/Models/Liveries/body_all.png</texture>	
@@ -100,10 +104,10 @@
   
 <effect>
 	<inherits-from>Effects/model-transparent</inherits-from>
-	<object-name>Glass</object-name>
+	<!-- <object-name>Glass</object-name>
   <object-name>DoorL_glass</object-name>
   <object-name>DoorR_glass</object-name>
-  <object-name>Headlights_glass</object-name>
+  <object-name>Headlights_glass</object-name> -->
   <object-name>Indicator_glass</object-name>
 	<object-name>propellerblur</object-name>
 	<object-name>rotorBlade1Fblur</object-name>
@@ -117,7 +121,33 @@
 </effect>
 
 <effect>
-	<inherits-from>Aircraft/Cavalon-915IS/Models/Effects/bumpspec</inherits-from>
+    	<inherits-from>Aircraft/Cavalon-915IS/Models/Effects/Fx/cavalon-glass-combined</inherits-from>
+			<!-- normals out -->
+    		<!-- material Glass-->
+    	<!-- <object-name>Glass_in</object-name> -->
+      <object-name>Front_glass_out</object-name>
+      <object-name>DoorL_glass_out</object-name>
+      <object-name>DoorR_glass_out</object-name>
+      <object-name>Headlights_glass</object-name>
+
+      <object-name>LightsPostGlass</object-name>
+  	</effect>
+  	
+  	<effect>
+    	<inherits-from>Aircraft/Cavalon-915IS/Models/Effects/Fx/FrostAndRain/glass</inherits-from>
+			<!-- normals in -->
+    		<!-- material GlassMat-->
+    	<object-name>Front_rain_out</object-name>
+      <object-name>Front_rain_in</object-name>
+      <object-name>DoorL_rain_out</object-name>
+      <object-name>DoorR_rain_out</object-name>
+      <object-name>DoorL_rain_in</object-name>
+      <object-name>DoorR_rain_in</object-name>
+</effect>
+
+<effect>
+	<!-- <inherits-from>Aircraft/Cavalon-915IS/Models/Effects/bumpspec</inherits-from> -->
+  <inherits-from>Aircraft/Cavalon-915IS/Models/Effects/Bump/bumpspec</inherits-from>
 	 <object-name>Fuselage</object-name>
    <object-name>Fuselage2</object-name>
    <object-name>Fuselage3</object-name>
@@ -132,8 +162,9 @@
   <object-name>MudguardR</object-name>
   <object-name>gearRLeg</object-name>
   <object-name>gearLLeg</object-name>
-  <object-name>TailBoom</object-name>
+  <!-- <object-name>TailBoom2</object-name> -->
   <object-name>TailBoom3</object-name>
+  <object-name>LightsPost</object-name>
 </effect>
 
 
@@ -153,7 +184,7 @@
       <y>  1 </y>
       <z>  0 </z>
     </axis>
-  </animation>
+</animation>
 
   
 <animation>
@@ -163,7 +194,7 @@
        <less-than>
         <property>engines/engine[0]/rpm</property>
         <value>1000.000</value>
-      </less-than>
+        </less-than>
        </condition>
  <property>engines/engine[0]/rpm</property>
   <factor>0.05</factor>
@@ -211,32 +242,33 @@
 
 <animation>
   <type>spin</type>
- <object-name>propeller</object-name>
-   <condition>
+  <object-name>propeller</object-name>
+    <condition>
       <greater-than>
         <property>engines/engine[0]/rpm</property>
         <value>1600.0001</value>
       </greater-than>
     </condition>
-     <property>engines/engine[0]/rpm</property>
-  <factor>0.02</factor>
-  <center>
-      <x-m> 0.949308 </x-m>
-      <y-m> -0.000776 </y-m>
-      <z-m> 1.31419 </z-m>
-    </center>
-    <axis>
-      <x>  -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
-    </axis>
- </animation> 
+      <property>engines/engine[0]/rpm</property>
+      <factor>0.02</factor>
+      <center>
+        <x-m> 0.949308 </x-m>
+        <y-m> -0.000776 </y-m>
+        <z-m> 1.31419 </z-m>
+      </center>
+      <axis>
+        <x>  -1 </x>
+        <y>  0 </y>
+        <z>  0 </z>
+      </axis>
+</animation> 
  
  
   <animation>
     <type>rotate</type>
     <object-name>controlstick</object-name>
     <object-name>controlstick_brake</object-name>
+    <object-name>stick_button1</object-name>
     <property>rotors/main/tilt/roll-deg</property>
     <factor> 1 </factor>
     <center>
@@ -255,6 +287,7 @@
     <type>rotate</type>
     <object-name>controlstick</object-name>
     <object-name>controlstick_brake</object-name>
+    <object-name>stick_button1</object-name>
     <property>rotors/main/tilt/pitch-deg</property>
     <factor> 1 </factor>
     <offset-deg>-16</offset-deg>
@@ -274,6 +307,7 @@
     <type>rotate</type>
     <object-name>controlstick2</object-name>
     <object-name>controlstick_brake2</object-name>
+    <object-name>stick_button2</object-name>
     <property>rotors/main/tilt/roll-deg</property>
     <factor> 1 </factor>
     <center>
@@ -292,6 +326,7 @@
     <type>rotate</type>
     <object-name>controlstick2</object-name>
     <object-name>controlstick_brake2</object-name>
+    <object-name>stick_button2</object-name>
     <property>rotors/main/tilt/pitch-deg</property>
     <factor> 1 </factor>
     <offset-deg>-16</offset-deg>
@@ -358,7 +393,10 @@
     <type>rotate</type>
     <object-name>DoorL</object-name>
     <object-name>DoorL_inside</object-name>
-    <object-name>DoorL_glass</object-name>
+    <!-- <object-name>DoorL_glass</object-name> -->
+    <object-name>DoorL_glass_out</object-name>
+    <object-name>DoorL_rain_out</object-name>
+    <object-name>DoorL_rain_in</object-name>
     <object-name>DoorHinge2L</object-name>
     <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 85 </factor>
@@ -389,7 +427,10 @@
     <type>rotate</type>
     <object-name>DoorR</object-name>
     <object-name>DoorR_inside</object-name>
-    <object-name>DoorR_glass</object-name>
+    <!-- <object-name>DoorR_glass</object-name> -->
+    <object-name>DoorR_glass_out</object-name>
+    <object-name>DoorR_rain_out</object-name>
+    <object-name>DoorR_rain_in</object-name>
     <object-name>DoorHinge2R</object-name>
     <property>sim/model/door-positions/crew/position-norm</property>
     <factor> -85 </factor>
@@ -401,6 +442,118 @@
       <y2-m> 0.58076 </y2-m>
       <z2-m> 1.11343 </z2-m>
     </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Buttons</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/lights/nav-lights</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch2")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <!--<animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/lights/strobe-lights</property>
+      </binding>
+       <binding>
+        <command>property-toggle</command>
+        <property>sim/controls/lighting/beacon</property>
+      </binding> 
+    </action>
+  </animation>-->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch.001</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/master-avionics</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch.003</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/lights/landing-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/lights/taxi-lights</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch.004</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/lights/nav-lights</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch.005</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/lights/strobe-lights</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
   </animation>
 
   
@@ -949,10 +1102,62 @@
 
   <animation>
     <type>noshadow</type>
-	<object-name>rotorBlade1Fblur</object-name>
-	<object-name>rotorBlade2Bblur</object-name>
-	<object-name>propellerblur</object-name>	
+	  <object-name>rotorBlade1Fblur</object-name>
+	  <object-name>rotorBlade2Bblur</object-name>
+	  <object-name>propellerblur</object-name>	
   </animation>
+
+  <!-- MFDS -->
+
+  <animation>
+<type>select</type>
+<object-name>IPV.ekran</object-name>
+  <condition>
+    <property>controls/switches/master-avionics</property>
+    <!-- <property>/controls/power/battery</property>
+    <equals>
+      <property>controls/mfd/mfdpage</property>
+      <value>2</value>
+    </equals> -->
+  </condition>
+</animation>
+
+<animation>
+        <type>material</type>
+        <object-name>IPV.ekran</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>1.0</green>
+            <blue>1.0</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+            <!-- <factor-prop>controls/mfd/displays/brightness-mm</factor-prop> -->
+        </emission>
+</animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>MFD.screen</object-name>
+    <condition>
+      <property>controls/switches/master-avionics</property>
+      <!-- <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/mfd/mfdpage</property>
+        <value>1</value>
+      </equals> -->
+    </condition>
+  </animation>
+
+<animation>
+        <type>material</type>
+        <object-name>MFD.screen</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>1.0</green>
+            <blue>1.0</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+            <!-- <factor-prop>controls/mfd/displays/brightness-mm</factor-prop> -->
+        </emission>
+</animation>
  
 
 	<model>
@@ -978,6 +1183,86 @@
       <x-m>-0.03</x-m>
       <y-m>0.23445</y-m>
       <z-m>0.761837</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Cavalon-915IS/Models/Effects/Lights/RedLight.xml</path>
+    <offsets>
+      <x-m> 0.106928 </x-m>
+      <y-m> -0.724048 </y-m>
+      <z-m>  1.04228 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Cavalon-915IS/Models/Effects/Lights/StrobeLight.xml</path>
+    <offsets>
+      <x-m> 0.106928 </x-m>
+      <y-m> -0.724048 </y-m>
+      <z-m>  1.04228 </z-m>
+    </offsets>
+  </model>
+
+  <!-- <model>
+    <path>Aircraft/Cavalon-915IS/Models/Effects/Lights/beacon.xml</path>
+    <offsets>
+      <x-m> 0.106928 </x-m>
+      <y-m> -0.724048 </y-m>
+      <z-m>  1.04228 </z-m>
+    </offsets>
+  </model> -->
+
+  <model>
+    <path>Aircraft/Cavalon-915IS/Models/Effects/Lights/GreenLight.xml</path>
+    <offsets>
+       <x-m> 0.106928 </x-m>
+      <y-m> 0.724048 </y-m>
+      <z-m>  1.04228 </z-m>
+    </offsets>
+  </model>
+
+  <!-- <x-m> 0.38584 </x-m>
+      <y-m>  0.74758 </y-m>
+      <z-m>  0.495613 </z-m> -->
+
+  <model>
+    <path>Aircraft/Cavalon-915IS/Models/Effects/Lights/StrobeLight.xml</path>
+    <offsets>
+      <x-m> 0.106928 </x-m>
+      <y-m> 0.724048 </y-m>
+      <z-m>  1.04228 </z-m>
+    </offsets>
+  </model>
+
+  <!-- <model>
+    <path>Aircraft/Cavalon-915IS/Models/Effects/Lights/beacon.xml</path>
+    <offsets>
+      <x-m> 0.106928 </x-m>
+      <y-m> 0.724048 </y-m>
+      <z-m>  1.04228 </z-m>
+    </offsets>
+  </model> -->
+
+  <model>
+    <path>Aircraft/DR400/Models/light/TaxiLight.xml</path>
+    <offsets>
+      <x-m> -1.80585 </x-m>
+      <y-m>  -0.348135 </y-m>
+      <z-m>  0.659006 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
+      <heading-deg> 8 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DR400/Models/light/LandingLight.xml</path>
+    <offsets>
+      <x-m> -1.80585 </x-m>
+      <y-m>  0.348135 </y-m>
+      <z-m>  0.659006 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
+      <heading-deg> -8 </heading-deg>
     </offsets>
   </model>
   

@@ -35,7 +35,23 @@
         <int type="int" n="4">0</int>
         <int type="int" n="5">0</int>
 		
-	  <float n="0" alias="/position/altitude-agl-ft">0</float>  
+	  <!-- <float n="0" alias="/position/altitude-agl-ft">0</float> -->
+        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m">0</float>
+        <float n="3"  alias="/systems/electrical/outputs/nav-lights"/>
+        <float n="4"  alias="/systems/electrical/outputs/landing-lights"/>
+        <float n="5"  alias="/systems/electrical/outputs/taxi-lights"/>
+        <float n="6"  alias="/systems/electrical/outputs/strobe-lights"/>
+        <float n="7"  alias="/systems/electrical/volts"/>
+        <float n="8"  alias="/engines/engine[0]/rpm"/>
+        <float n="9"  alias="/engines/engine[0]/cranking"/>
+        <float n="10" alias="/gear/gear[0]/wow/"/>
+        <float n="11" alias="/gear/gear[1]/wow/"/>
+        <float n="12" alias="/gear/gear[2]/wow/"/>
+        <float n="13" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="14" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="15" alias="/gear/gear[2]/rollspeed-ms"/> 
 	
       </generic>
     </multiplay>
@@ -82,6 +98,16 @@
                 <name>l</name>
                 <desc>Toggle Look Down</desc>
             </key>
+
+      <key>
+                <name>d</name>
+                <desc>Toggle Pilot Door</desc>
+            </key>
+
+      <key>
+                <name>D</name>
+                <desc>Toggle Copilot Door</desc>
+            </key>
 			
       <title>Cavalon-915IS (Autogyro)</title>
       <line>   Start And Take Off</line>
@@ -109,10 +135,10 @@
       <line></line>
       <line>   Warning!</line>
       <line>Avoid sudden movements. This can cause Pilot Induced Oscillation (PIO).</line>
-	  <line>Never force forward pitch. This can cause negative G.</line>
-	  <line>Use throttle first, stick later.</line>
-	  <line>Avoid flying at zero G! It is dangerous!</line>
-	  <line>Negative and zero G can cause a Power Pushover (PPO).</line>
+	    <line>Never force forward pitch. This can cause negative G.</line>
+	    <line>Use throttle first, stick later.</line>
+	    <line>Avoid flying at zero G! It is dangerous!</line>
+	    <line>Negative and zero G can cause a Power Pushover (PPO).</line>
 	  </help>
 
     <hud>
@@ -163,7 +189,7 @@
    <!-- Payload  -->
    <weight>
    <name type="string">Pilot</name>
-   <weight-lb alias="/yasim/jt5b/pilot-lb"/>
+   <weight-lb alias="/yasim/cavalon915is/pilot-lb"/>
    <min-lb type="double">0.0</min-lb>
    <max-lb type="double">210.0</max-lb>
   </weight> 
@@ -172,9 +198,9 @@
   </sim>
 
   <yasim>
-    <jt5b>
+    <cavalon915is>
 	  <pilot-lb>180.0</pilot-lb>
-    </jt5b>
+    </cavalon915is>
   </yasim>
 
 
@@ -187,13 +213,14 @@
   
     <engines>
       <engine n="0">
-        <magnetos>3</magnetos>
+        <magnetos>0</magnetos>
       </engine>
     </engines>
     
     <gear>
       <brake-parking>1</brake-parking>
     </gear>
+    
     <lighting>
       <strobe type="bool">true</strobe>
       <beacon type="bool">true</beacon>
@@ -204,8 +231,145 @@
       <reltarget>1</reltarget>
       <maxreltorque>1</maxreltorque>
     </rotor>
+
+    <ventilation>
+      		<windshield-antiice-lever type="bool">false</windshield-antiice-lever>
+      		<airconditioning-type type="int">0</airconditioning-type><!-- cold for 12s: -1 auto: 0 warm for 12s: 1 -->
+      		<airconditioning-enabled type="bool">true</airconditioning-enabled>
+      		<airconditioning-temperature type="double">16.0</airconditioning-temperature><!-- used for auto -->
+    </ventilation>
+
+    <mfd>
+      		<mfdpage type="double">0</mfdpage>
+      		<hdgbugset type="double">0</hdgbugset>
+      		<displays>
+        		<live-map type="bool">true</live-map>
+        		<scale type="double">0</scale>
+			      <brightness-mm type="double">0</brightness-mm>
+      		</displays>
+    </mfd>
+
+    <sound>
+        	<click-switch type="bool">false</click-switch>
+			    <click-switch2 type="bool">false</click-switch2>
+    </sound>
     
   </controls>
+
+  <!-- Instrumentation -->
+	
+	<instrumentation>
+    <enav>
+			<selected type="int">3</selected>
+		</enav>
+
+		<efis>
+			<ecam>
+				<display-mode type="string">FUEL</display-mode>
+			</ecam>
+			<nd>
+				<display-mode type="string">VOR</display-mode>
+				<display-mode-knob type="int">2</display-mode-knob>
+				<display-range type="int">40</display-range>
+			</nd>
+			<input>
+				<vor-adf-1 type="int">1</vor-adf-1>
+				<vor-adf-2 type="int">1</vor-adf-2>
+				<CSTR type="bool">1</CSTR>
+				<WPT type="bool">1</WPT>
+				<VORD type="bool">1</VORD>
+				<NDB type="bool">1</NDB>
+				<ARPT type="bool">1</ARPT>
+				<WX type="bool">1</WX>
+				<TERR type="bool">1</TERR>
+				<TRAF type="bool">1</TRAF>
+				<taxi type="bool">1</taxi>
+			</input>
+		</efis>
+
+    <tcas>
+      <!-- http://wiki.flightgear.org/index.php/TCAS -->
+
+      <serviceable type="bool">true</serviceable>
+      <!-- TCAS ENABLE -->
+
+      <inputs>
+        <mode type="int">3</mode>
+        <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+      </inputs>
+
+      <speaker>
+        <!-- Speaker Configuration -->
+        <max-dist> 2 </max-dist>
+        <!-- Max. distance where speaker is heard -->
+        <reference-dist> 1 </reference-dist>
+        <!-- Distance to pilot -->
+        <volume> 1.0 </volume>
+        <!-- Volume at reference distance -->
+      </speaker>
+
+    </tcas>
+	</instrumentation>
+
+  <environment>
+   		<damage type="bool">false</damage>
+    	<damage-smoke type="bool">false</damage-smoke>
+    	<turbulence>
+      		<use-cloud-turbulence>true</use-cloud-turbulence>
+    	</turbulence>
+
+    	<aircraft-effects>
+      		<splash-vector-x type="float" userarchive="n">0.0</splash-vector-x>
+      		<splash-vector-y type="float" userarchive="n">0.1</splash-vector-y>
+      		<splash-vector-z type="float" userarchive="n">1.0</splash-vector-z>
+      		<frost-level type="float" userarchive="n">0.0</frost-level>
+      		<fog-level type="float" userarchive="n">0.0</fog-level>
+      		<ground-splash-norm type="float" userarchive="n">0.0</ground-splash-norm>
+      		<use-wipers type="int" userarchive="n">0</use-wipers>
+      		<use-overlay type="int" userarchive="n">0</use-overlay>
+      		<overlay-alpha type="float" userarchive="n">1.0</overlay-alpha>
+      		<use-mask type="int" userarchive="n">0</use-mask>
+      		<dewpoint-inside-degC type="float" userarchive="n">0.0</dewpoint-inside-degC>
+      		<temperature-inside-degC type="float" userarchive="n">15.0</temperature-inside-degC>
+      		<temperature-glass-degC type="float" userarchive="n">15.0</temperature-glass-degC>
+      		<glass-temperature-index type="float" userarchive="n">0.51</glass-temperature-index>
+      		<fog-inside type="float" userarchive="n">0.0</fog-inside>
+      		<fog-outside type="float" userarchive="n">0.0</fog-outside>
+      		<frost-inside type="float" userarchive="n">0.0</frost-inside>
+      		<frost-outside type="float" userarchive="n">0.0</frost-outside>
+    	</aircraft-effects>
+
+    	<precipitation-control>
+      		<clip-distance type="double">1.75</clip-distance>
+    	</precipitation-control>
+    	<pressure-inhg type="double">30</pressure-inhg>
+    	<weather-scenarios>
+      	<scenario n="17">
+        	<description type="string">
+          		ISA standard atmosphere.
+          		Be sure to use basic weather for flight testing with this.
+        	</description>
+        	<metar type="string">XXXX 012345Z 00000KT 35SM 15/05 Q1013.25 NOSIG</metar>
+        	<name type="string">ISA</name>
+      	</scenario>
+      	<scenario n="18">
+        	<description type="string">
+          		ISA +10 standard atmosphere.
+          		Be sure to use basic weather for flight testing with this.
+        	</description>
+        	<metar type="string">XXXX 012345Z 00000KT 35SM 25/15 Q1013.25 NOSIG</metar>
+        	<name type="string">ISA +10</name>
+      	</scenario>
+      	<scenario n="19">
+        	<description type="string">
+          		ISA -15 standard atmosphere.
+          		Be sure to use basic weather for flight testing with this.
+        	</description>
+        	<metar type="string">XXXX 012345Z 00000KT 35SM 00/M10 Q1013.25 NOSIG</metar>
+        	<name type="string">ISA -15</name>
+      		</scenario>
+    	</weather-scenarios>
+  	</environment>
 
   
   <rotors>
@@ -231,6 +395,7 @@
 	<nasal>
 		 
 	<Cavalon-915IS>
+    <file>Aircraft/Cavalon-915IS/Nasal/lights.nas</file>
 		<file>Aircraft/Cavalon-915IS/Nasal/liveries.nas</file>
 	</Cavalon-915IS>
 	
@@ -245,6 +410,22 @@
   <doors>
       <file>Aircraft/Cavalon-915IS/Nasal/doors.nas</file>
   </doors>
+
+  <environment>
+      		<file>Aircraft/Cavalon-915IS/Nasal/environment.nas</file>
+  </environment>
+
+  <mm>
+      <file>Aircraft/Cavalon-915IS/Nasal/moving-map.nas</file>
+  </mm>
+
+	<nd>
+      <file>Aircraft/Cavalon-915IS/Nasal/nd.nas</file>
+  </nd>
+
+  <switchclicksound>
+      <file>Aircraft/Cavalon-915IS/Nasal/switchclicksound.nas</file>
+  </switchclicksound>
 	
 	</nasal>
 

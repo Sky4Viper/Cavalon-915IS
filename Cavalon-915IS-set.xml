@@ -12,6 +12,29 @@
     <model type="int">4</model>
     <cockpit type="int">4</cockpit>
   </rating>
+
+  <previews>
+      <preview>
+        		<type>panel</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/screen1.png</path>
+			    </preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/screen2.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/screen3.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/screen4.png</path>
+			</preview>
+		</previews>
   
   </sim>
 
