@@ -3,6 +3,16 @@
 <PropertyList>
 
   <path>Cavalon-915IS.ac</path>
+
+  <!-- <model>
+		<usage>interior</usage>
+		<path>Aircraft/Cavalon-915IS/Models/Cockpit/Cockpit.xml</path>
+	</model> -->
+
+  <model>
+		<name>Main_Panel</name>
+		<path>Aircraft/Cavalon-915IS/Models/Cockpit/Main_Panel/Main_Panel.xml</path>
+	</model>
   
   
 	<nasal>
@@ -58,7 +68,10 @@
     <object-name>rotorLinkPre</object-name>
 
     <object-name>throttle</object-name>
-	  <object-name>prerotator</object-name>
+    <object-name>cabintemp_lever</object-name>
+    <object-name>waterflow_lever</object-name>
+    <object-name>throttle_plate</object-name>
+    <object-name>brake_lever</object-name>
 	
 	  <object-name>rotorBlade1Fblur</object-name>
 	  <object-name>rotorBlade2Bblur</object-name>
@@ -76,6 +89,12 @@
     <object-name>TailBoom3</object-name>
     <object-name>Tail</object-name>
     <object-name>rudder</object-name>
+
+    <object-name>throttle</object-name>
+    <object-name>cabintemp_lever</object-name>
+    <object-name>waterflow_lever</object-name>
+    <object-name>throttle_plate</object-name>
+    <object-name>brake_lever</object-name>
     
     <object-name>MudguardF</object-name>
     <object-name>MudguardL</object-name>
@@ -129,11 +148,11 @@
       <object-name>DoorL_glass_out</object-name>
       <object-name>DoorR_glass_out</object-name>
       <object-name>Headlights_glass</object-name>
-
+      <object-name>sunscreen_rail</object-name>
       <object-name>LightsPostGlass</object-name>
-  	</effect>
+</effect>
   	
-  	<effect>
+<effect>
     	<inherits-from>Aircraft/Cavalon-915IS/Models/Effects/Fx/FrostAndRain/glass</inherits-from>
 			<!-- normals in -->
     		<!-- material GlassMat-->
@@ -146,8 +165,7 @@
 </effect>
 
 <effect>
-	<!-- <inherits-from>Aircraft/Cavalon-915IS/Models/Effects/bumpspec</inherits-from> -->
-  <inherits-from>Aircraft/Cavalon-915IS/Models/Effects/Bump/bumpspec</inherits-from>
+  <inherits-from>Aircraft/Cavalon-915IS/Models/Effects/cavalon-combined-shader</inherits-from>
 	 <object-name>Fuselage</object-name>
    <object-name>Fuselage2</object-name>
    <object-name>Fuselage3</object-name>
@@ -165,15 +183,398 @@
   <!-- <object-name>TailBoom2</object-name> -->
   <object-name>TailBoom3</object-name>
   <object-name>LightsPost</object-name>
+
 </effect>
 
+<effect>
+  <inherits-from>Aircraft/Cavalon-915IS/Models/Effects/cavalon_interior</inherits-from>
+	 <object-name>Fuselage_inside</object-name>
+   <object-name>DoorL_inside</object-name>
+   <object-name>DoorR_inside</object-name>
+   <object-name>Dashboard</object-name>
+   <object-name>SeatBase</object-name>
+   <object-name>Seat</object-name>
+   <object-name>Floormat</object-name>
+   <object-name>Screws</object-name>
+   <object-name>CockpitWall</object-name>
+
+   <object-name>throttle</object-name>
+   <object-name>cabintemp_lever</object-name>
+   <object-name>waterflow_lever</object-name>
+   <object-name>throttle_plate</object-name>
+   <object-name>brake_lever</object-name>
+
+   <object-name>controlstick</object-name>
+   <object-name>controlstick_brake</object-name>
+   <object-name>stick_button1</object-name>
+   <object-name>trim_hat.001</object-name>
+   
+   <object-name>controlstick2</object-name>
+   <object-name>controlstick_brake2</object-name>
+   <object-name>stick_button2</object-name>
+   <object-name>trim_hat.002</object-name>
+
+   <!-- <object-name>MFD.001</object-name> -->
+
+   <!-- <object-name>g3_case</object-name> -->
+
+   <object-name>RpedalsB</object-name>
+   <object-name>RpedalsR</object-name>
+   <object-name>RpedalsL</object-name>
+   <object-name>LpedalsB</object-name>
+   <object-name>LpedalsR</object-name>
+   <object-name>LpedalsL</object-name>
+
+</effect>
+
+<!--
+Electrical System
+
+The 12V DC electrical system consists of two engine driven electrical generators, a battery,
+master switch, indicators, switches, electrical consumers, and cabling. With the ROTAX
+915iS engine an electrical power supply is vital for continued engine operation as this
+engine variant solely relies on electrically driven fuel pumps and engine ECU. GEN1 is used
+by the engine only, GEN2 is used to supply the aircraft ancillary systems.
+An additional, externally mounted 40A generator (Gen3) is optionally fitted to Cavalon
+gyroplanes equipped for high electrical load operations.
+Turning the master switch to the ON position closes the battery contact and energizes the
+gyroplane’s electrical system. The red LOW VOLT warning light will illuminate as a
+functional check. A steady indication, however, warns the pilot that the voltage of the
+system has dropped below a safe value. In this case a safety circuit (load shedding relay)
+will automatically disable the unnecessary systems (seat heating, 12V power receptacle,
+heating fan).
+Orange Gen3 (where fitted) warning light is installed to indicate that the battery is not being
+charged by that generator.
+
+Warning and Caution Lights
+-GEN (orange)
+-Low Volt (orange)
+-Fire (red)
+-Low Fuel (red)
+-Fuel P (amber)
+-Pitot (amber)
+-Water Level Indication (red)
+-Oil Pressure Indication (red)
+-Clutch (orange)
+-->
+
+<animation>
+        <type>material</type>
+        <!-- Gen 1 (red)-->
+        <object-name>Indicator_lights.001</object-name>
+        <!-- Gen 2 (red)-->
+        <object-name>Indicator_lights.002</object-name>
+        <emission>
+            <red>2.5</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+        <condition>
+        <or>
+          <equals>
+            <property>/controls/electric/engine/generator</property>
+            <value>0</value>
+          </equals>
+          <equals>
+            <property>engines/engine[0]/running</property>
+            <value>0</value>
+          </equals>
+        </or>
+        </condition>
+</animation>
+
+<animation>
+        <type>material</type>
+        <!-- Low Volt (orange)-->
+        <object-name>Indicator_lights.003</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.647</green>
+            <blue>0.0</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+        <condition>
+        <or>
+          <equals>
+            <property>/controls/electric/engine/generator</property>
+            <value>0</value>
+          </equals>
+          <equals>
+            <property>engines/engine[0]/running</property>
+            <value>0</value>
+          </equals>
+        </or>
+        </condition>
+</animation>
+
+<animation>
+        <type>material</type>
+        <!-- TCU (amber)-->
+        <object-name>Indicator_lights.004</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.749</green>
+            <blue>0.0</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+        <condition>
+        <less-than>
+            <property>/engines/engine/rpm</property>
+            <value>1400</value>
+        </less-than>
+        </condition>
+</animation>
+
+<animation>
+        <type>material</type>
+        <!-- Water lvl (red)
+        <object-name>Indicator_lights.005</object-name>-->
+        <!-- Oil P (red)-->
+        <object-name>Indicator_lights.006</object-name>
+        <emission>
+            <red>2.5</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+        <condition>
+        <or>
+        <less-than>
+            <property>/engines/engine[0]/oil-pressure-psi</property>
+            <value>10</value>
+        </less-than>
+        <greater-than>
+            <property>/engines/engine[0]/oil-pressure-psi</property>
+            <value>80</value>
+        </greater-than>
+        </or>
+        </condition>
+</animation>
+
+<animation>
+        <type>material</type>
+        <!-- Fire (red)-->
+        <object-name>Indicator_lights.007</object-name>
+        <emission>
+            <red>2.5</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+        <condition>
+          <property>sim/crashed</property>
+        </condition>
+</animation>
+
+<animation>
+        <type>material</type>
+        <!-- Boost -->
+        <object-name>Indicator_lights.008</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.749</green>
+            <blue>0.0</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+        <condition>
+          <property>/controls/engines/engine[0]/boost</property>
+          <!-- <property>controls/engines/engine/starter</property>
+          <not>
+          <property>/controls/engines/engine[0]/boost</property>
+          </not>
+          <less-than>
+            <property>/rotors/main/rpm</property>
+            <value>250</value>
+        </less-than> -->
+        </condition>
+</animation>
+
+<!-- Rotor speed is measured by a magnetic pick-up, located directly at the geared ring of the
+rotor head.
+Comparison of rotor RPM with engine RPM governs the CLUTCH indication that informs the
+pilot about a slipping clutch (continuous light) or warns of an attempted take-off run with the
+risk of blade flapping (blinking).
+-CLUTCH is on with engine speeds above 2200 RPM and rotor speed
+not matching while pre-rotator is depressed (slipping clutch)
+-CLUTCH is blinking with engine speeds above 5000 RPM and rotor speed
+below 200 RPM (attempted take-off run with the risk of blade flapping)
+NOTE
+If the stick is pulled back more than 5degrees the pre rotator clutch will
+automatically disengage. In this case the CLUTCH lamp will indicate a
+continuous light until the pre rotator button is released. -->
+
+<animation>
+        <type>material</type>
+        <!-- Clutch -->
+        <object-name>Indicator_lights.010</object-name>
+        <emission>
+            <red>0.01</red>
+            <green>1.0</green>
+            <blue>0.01</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+        <condition>
+          <property>controls/engines/engine/starter</property>
+          <less-than>
+            <property>/rotors/main/rpm</property>
+            <value>220</value>
+          </less-than>
+        </condition>
+</animation>
+
+<animation>
+        <type>material</type>
+        <!-- Water -->
+        <object-name>Indicator_lights.011</object-name>
+        <emission>
+            <red>0.01</red>
+            <green>1.0</green>
+            <blue>0.01</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+</animation>
+
+
+<!-- Low Fuel 
+  As an option, a low fuel level sensor may be installed in the left tank (required for UK and USA Primary category).
+  The LOW FUEL warning light is triggered as soon as 5 litres or less of useable fuel remain in the tank.
+-->
+
+<animation>
+        <type>material</type>
+        <object-name>Indicator_lights.009</object-name>
+        <emission>
+            <red>2.5</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+        <condition>
+        <or>
+          <not>
+            <property>controls/engines/engine/fuel-pump</property>
+          </not>
+          <less-than>
+            <property>/consumables/fuel/tank/level-lbs</property>
+            <value>10</value>
+          </less-than>
+        </or>
+        </condition>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>prop_switch</object-name>
+        <emission>
+        <red>0.25</red>
+        <green>0.25</green>
+        <blue>0.25</blue>
+            <factor-prop>/systems/electrical/outputs/panel-lights-norm</factor-prop>
+        </emission>
+        <condition>
+          <property>/systems/electrical/outputs/panel-lights</property>
+        </condition>
+ </animation>
+
+<animation>
+        <type>material</type>
+        <!-- Propeller pitch Fine (orange)-->
+        <object-name>prop_pitch_light.001</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.647</green>
+            <blue>0.0</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+        <condition>
+          <or>
+          <equals>
+            <property>/controls/engines/engine[0]/propeller-pitch</property>
+            <value>0.52</value>
+          </equals>
+          <equals>
+            <property>/controls/engines/engine[0]/propeller-pitch</property>
+            <value>0.42</value>
+          </equals>
+          </or>
+        </condition>
+</animation>
+
+<animation>
+        <type>material</type>
+        <!-- Propeller pitch Coarse (orange)-->
+        <object-name>prop_pitch_light.002</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.647</green>
+            <blue>0.0</blue>
+			      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+        <condition>
+        <or>
+          <equals>
+            <property>/controls/engines/engine[0]/propeller-pitch</property>
+            <value>0.42</value>
+          </equals>
+          <equals>
+            <property>/controls/engines/engine[0]/propeller-pitch</property>
+            <value>0.32</value>
+          </equals>
+          </or>
+        </condition>
+</animation>
+
+<!--<effect>
+        <inherits-from>Effects/model-interior-display</inherits-from>
+        <object-name>MFD.screen</object-name>
+        <object-name>IPV.ekran</object-name>
+</effect> -->
 
 <animation>
     <type>rotate</type>
     <object-name>throttle</object-name>
-    <object-name>prerotator</object-name>
+    <object-name>brake_lever</object-name>
 	  <property>/controls/engines/engine[0]/throttle</property>
-    <factor> 50 </factor>
+    <factor> 48 </factor>
+    <offset-deg>-48</offset-deg>
+    <center>
+      <x-m> -0.710676 </x-m>
+      <y-m> -0.000404 </y-m>
+      <z-m> 0.630865 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  -1 </y>
+      <z>  0 </z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>brake_lever</object-name>
+	  <!-- <property>/controls/rotor/brake</property> -->
+    <property>/controls/gear/brake-left</property>
+    <factor> 2 </factor>
+    <!-- <offset-deg>-4</offset-deg> -->
+    <center>
+      <x-m> -0.710676 </x-m>
+      <y-m> -0.000404 </y-m>
+      <z-m> 0.630865 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>brake_lever</object-name>
+    <property>/controls/gear/brake-parking</property>
+    <factor> 6 </factor>
+    <!-- <offset-deg>-4</offset-deg> -->
     <center>
       <x-m> -0.710676 </x-m>
       <y-m> -0.000404 </y-m>
@@ -269,6 +670,7 @@
     <object-name>controlstick</object-name>
     <object-name>controlstick_brake</object-name>
     <object-name>stick_button1</object-name>
+    <object-name>trim_hat.001</object-name>
     <property>rotors/main/tilt/roll-deg</property>
     <factor> 1 </factor>
     <center>
@@ -288,6 +690,7 @@
     <object-name>controlstick</object-name>
     <object-name>controlstick_brake</object-name>
     <object-name>stick_button1</object-name>
+    <object-name>trim_hat.001</object-name>
     <property>rotors/main/tilt/pitch-deg</property>
     <factor> 1 </factor>
     <offset-deg>-16</offset-deg>
@@ -308,6 +711,7 @@
     <object-name>controlstick2</object-name>
     <object-name>controlstick_brake2</object-name>
     <object-name>stick_button2</object-name>
+    <object-name>trim_hat.002</object-name>
     <property>rotors/main/tilt/roll-deg</property>
     <factor> 1 </factor>
     <center>
@@ -327,6 +731,7 @@
     <object-name>controlstick2</object-name>
     <object-name>controlstick_brake2</object-name>
     <object-name>stick_button2</object-name>
+    <object-name>trim_hat.002</object-name>
     <property>rotors/main/tilt/pitch-deg</property>
     <factor> 1 </factor>
     <offset-deg>-16</offset-deg>
@@ -393,7 +798,6 @@
     <type>rotate</type>
     <object-name>DoorL</object-name>
     <object-name>DoorL_inside</object-name>
-    <!-- <object-name>DoorL_glass</object-name> -->
     <object-name>DoorL_glass_out</object-name>
     <object-name>DoorL_rain_out</object-name>
     <object-name>DoorL_rain_in</object-name>
@@ -427,7 +831,6 @@
     <type>rotate</type>
     <object-name>DoorR</object-name>
     <object-name>DoorR_inside</object-name>
-    <!-- <object-name>DoorR_glass</object-name> -->
     <object-name>DoorR_glass_out</object-name>
     <object-name>DoorR_rain_out</object-name>
     <object-name>DoorR_rain_in</object-name>
@@ -453,7 +856,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>sim/model/lights/nav-lights</property>
+        <property>/controls/engines/engine[0]/boost</property>
       </binding>
       <binding>
         <command>nasal</command>
@@ -461,24 +864,6 @@
       </binding>
     </action>
   </animation>
-
-  <!--<animation>
-    <type>pick</type>
-    <visible>true</visible>
-    <object-name>Switch</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-toggle</command>
-        <property>sim/model/lights/strobe-lights</property>
-      </binding>
-       <binding>
-        <command>property-toggle</command>
-        <property>sim/controls/lighting/beacon</property>
-      </binding> 
-    </action>
-  </animation>-->
 
   <animation>
     <type>pick</type>
@@ -501,14 +886,32 @@
   <animation>
     <type>pick</type>
     <visible>true</visible>
-    <object-name>Switch.003</object-name>
+    <object-name>Switch.002</object-name>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>sim/model/lights/landing-lights</property>
+        <property>controls/engines/engine/fuel-pump</property>
       </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>consumables/fuel/tank[0]/selected</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch.003</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>sim/model/lights/taxi-lights</property>
@@ -556,7 +959,403 @@
     </action>
   </animation>
 
-  
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch.006</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <!-- <property>controls/mfd/displays/live-map</property> -->
+        <property>instrumentation/gps/serviceable</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch.007</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/systems/electrical/outputs/panel-lights</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch.009</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/lights/landing-lights</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch.010</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/pitot-heat</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Propeller pitch switch -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>prop_switch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-cycle</command>
+        <property>/controls/engines/engine[0]/propeller-pitch</property>
+        <value>0.52</value>
+        <value>0.32</value>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>switchclicksound.click("switch")</script>
+      </binding>
+    </action>
+    <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>prop-pitch-adj</tooltip-id>
+                <label>Set propeller pitch</label>
+        </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+        <type>pick</type>
+        <object-name>prop_switch</object-name>
+        <action>
+            <button>3</button>
+            <binding>
+            <command>property-adjust</command>
+            <property>/controls/engines/engine[0]/propeller-pitch</property>
+            <step>0.01</step>
+            <min>0.32</min>
+            <max>0.52</max>
+            <wrap>0</wrap>
+        </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>prop_switch</object-name>
+        <action>
+            <button>4</button>
+            <binding>
+            <command>property-adjust</command>
+            <property>/controls/engines/engine[0]/propeller-pitch</property>
+            <step>-0.01</step>
+            <min>0.32</min>
+            <max>0.52</max>
+            <wrap>0</wrap>
+        </binding>
+        </action>
+    </animation>
+
+    <!-- Throttle lever-->
+
+    <animation>
+        <type>slider</type>
+        <object-name>throttle</object-name>
+        <property>controls/engines/engine[0]/throttle</property>
+
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[0]/throttle</property>
+                <factor>0.02</factor>
+                <min>0.0</min>
+                <max>100.0</max>                
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        
+        <shift-action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine[0]/throttle</property>
+                <factor>0.1</factor>
+            </binding>
+        </shift-action>
+        
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>throttle-adj</tooltip-id>
+                <label>Throttle</label>
+            </binding>
+        </hovered>
+        
+    </animation>
+
+<!-- Switches animation -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch.001</object-name>
+    <property>controls/switches/master-avionics</property>
+    <factor> 50 </factor>
+    <offset-deg>-25</offset-deg>
+    <center>
+      <x-m>-1.23198	</x-m>
+	    <y-m> 0.316865	</y-m>
+	    <z-m> 0.957453 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch.002</object-name>
+    <property>controls/engines/engine/fuel-pump</property>
+    <factor> 50 </factor>
+    <offset-deg>-25</offset-deg>
+    <center>
+      <x-m>-1.23198	</x-m>
+	    <y-m> 0.342065	</y-m>
+	    <z-m> 0.957453 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch.003</object-name>
+    <property>sim/model/lights/taxi-lights</property>
+    <factor> 50 </factor>
+    <offset-deg>-25</offset-deg>
+    <center>
+      <x-m>-1.23198	</x-m>
+	    <y-m> 0.367265	</y-m>
+	    <z-m> 0.957453 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch.004</object-name>
+    <property>sim/model/lights/nav-lights</property>
+    <factor> 50 </factor>
+    <offset-deg>-25</offset-deg>
+    <center>
+      <x-m>-1.23198	</x-m>
+	    <y-m> 0.392465	</y-m>
+	    <z-m> 0.957453 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch.005</object-name>
+    <property>sim/model/lights/strobe-lights</property>
+    <factor> 50 </factor>
+    <offset-deg>-25</offset-deg>
+    <center>
+      <x-m>-1.23198	</x-m>
+	    <y-m> 0.417666	</y-m>
+	    <z-m> 0.957453 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch.006</object-name>
+    <!-- <property>controls/mfd/displays/live-map</property> -->
+    <property>instrumentation/gps/serviceable</property>
+    <factor> 50 </factor>
+    <offset-deg>-25</offset-deg>
+    <center>
+      <x-m>-1.23198	</x-m>
+	    <y-m> 0.442866	</y-m>
+	    <z-m> 0.957453 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch.007</object-name>
+    <property>/systems/electrical/outputs/panel-lights</property>
+    <factor> 50 </factor>
+    <offset-deg>-25</offset-deg>
+    <center>
+      <x-m>-1.22309	</x-m>
+	    <y-m> 0.316865	</y-m>
+	    <z-m> 0.935344 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch.008</object-name>
+    <property>sim/model/lights/beacon</property>
+    <factor> 50 </factor>
+    <offset-deg>-25</offset-deg>
+    <center>
+      <x-m>-1.22309	</x-m>
+	    <y-m> 0.342065	</y-m>
+	    <z-m> 0.935344 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch.009</object-name>
+    <property>sim/model/lights/landing-lights</property>
+    <factor> 50 </factor>
+    <offset-deg>-25</offset-deg>
+    <center>
+      <x-m>-1.22309	</x-m>
+	    <y-m> 0.367265	</y-m>
+	    <z-m> 0.935344 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch.010</object-name>
+    <property>controls/switches/pitot-heat</property>
+    <factor> 50 </factor>
+    <offset-deg>-25</offset-deg>
+    <center>
+      <x-m>-1.22309	</x-m>
+	    <y-m> 0.392465	</y-m>
+	    <z-m> 0.935344 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+<!-- <animation>
+ <type>knob</type>
+ <object-name>prop_switch</object-name>
+  <action>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/propeller-pitch</property>
+          <factor>0.01</factor>
+          <min>0.29</min>
+          <max>0.49</max>
+          <wrap>false</wrap>
+        </binding>
+  </action>
+  <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>prop-pitch-adj</tooltip-id>
+                <label>Set propeller pitch</label>
+        </binding>
+  </hovered>
+</animation> -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>prop_switch</object-name>
+    <property>/controls/engines/engine[0]/propeller-pitch</property>
+    <interpolation>
+      <entry><ind>0.52</ind><dep>-25.0</dep></entry>
+      <entry><ind>0.32</ind><dep>0.0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-1.21931 </x-m>
+      <y-m> 0.266226 </y-m>
+      <z-m> 0.93315 </z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- Main Rotor rotate -->
+
   <animation>
     <type>rotate</type>
     <object-name>rotorMiddle</object-name>
@@ -590,6 +1389,8 @@
     </axis>
   </animation>
 
+  <!-- Rotor Links -->
+
   <animation>
     <type>translate</type>
     <object-name>rotorLinkL</object-name>
@@ -604,83 +1405,7 @@
       <z2-m>2.4787 </z2-m>
     </axis>
   </animation>
-
-
-  <!--<animation>
-    <type>translate</type>
-    <object-name>rotorLinkR</object-name>
-    <property>rotors/main/tilt/pitch-deg</property>
-    <factor>-0.0035 </factor>
-    <axis>
-      <x1-m> -0.2452</x1-m>
-      <y1-m>0.04034</y1-m>
-      <z1-m> -0.2671</z1-m>
-      <x2-m> 0.3014</x2-m>
-      <y2-m>0.1265</y2-m>
-      <z2-m>1.0638</z2-m>
-    </axis>
-</animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>rotorLinkR</object-name>
-    <object-name>rotorLinkL</object-name>
-    <property>rotors/main/tilt/pitch-deg</property>
-    <factor>-0.01 </factor>
-    <axis>
-      <x1-m> -0.2452</x1-m>
-      <y1-m>0.04034</y1-m>
-      <z1-m> -0.2671</z1-m>
-      <x2-m> -0.2452</x2-m>
-      <y2-m>-0.04034</y2-m>
-      <z2-m> -0.2671</z2-m>
-    </axis>
-</animation>
-
-
-  <animation>
-    <type>rotate</type>
-    <object-name>rotorLinkR</object-name>
-    <object-name>rotorLinkL</object-name>
-    <property>rotors/main/tilt/pitch-deg</property>
-    <factor>-0.01 </factor>
-    <axis>
-      <x1-m> -0.2452</x1-m>
-      <y1-m>0.04034</y1-m>
-      <z1-m> -0.2671</z1-m>
-      <x2-m> -0.2452</x2-m>
-      <y2-m>-0.04034</y2-m>
-      <z2-m> -0.2671</z2-m>
-    </axis>
-</animation>
-
-
-   <animation>
-    <type>translate</type>
-    <object-name>rotorLinkR</object-name>
-    <property>rotors/main/tilt/roll-deg</property>
-    <factor>0.0028</factor>
-    <axis>
-	<x>  0 </x>
-	<y>  0 </y>
-	<z>  1 </z>
-    </axis>
-</animation>
-
-  <animation>
-    <type>translate</type>
-    <object-name>rotorLinkL</object-name>
-   <property>rotors/main/tilt/roll-deg</property>
-    <factor>-0.0028</factor>
-    <axis>
-	<x>  0 </x>
-	<y>  0 </y>
-	<z>  1 </z>
-    </axis>
-  </animation> -->
   
-  
-
     <animation>
     <type>rotate</type>
     <object-name>rotorLinkPre</object-name>
@@ -751,6 +1476,7 @@
     </axis>
   </animation>
   
+<!-- Main Rotor Spin -->
 
  <animation>
 	<type>spin</type>
@@ -846,6 +1572,7 @@
     </condition>
 </animation>
 
+<!-- Propeller -->
  
 <animation>
     <type>select</type>
@@ -872,7 +1599,7 @@
 
 <!-- rudder -->
 
- <animation>
+  <animation>
     <type>rotate</type>
     <object-name>rudder</object-name>
     <property>surface-positions/rudder-pos-norm</property>
@@ -889,8 +1616,9 @@
     </axis>
   </animation>
 
+<!-- Pedals -->
 
-<animation>
+  <animation>
     <type>rotate</type>
     <object-name>RpedalsL</object-name>
     <property>surface-positions/rudder-pos-norm</property>
@@ -958,7 +1686,9 @@
     </axis>
   </animation>
 
-<animation>
+<!-- Gears -->
+
+  <animation>
     <type>rotate</type>
     <object-name>gearF</object-name>
     <object-name>gearFLeg</object-name>
@@ -977,8 +1707,6 @@
       <z> -1 </z>
     </axis>
   </animation>
-  
-  
   
    <animation>
     <type>rotate</type>
@@ -1012,7 +1740,7 @@
 	</interpolation>
   </animation>
 
-    <animation>
+  <animation>
     <type>rotate</type>
     <object-name>gearR</object-name>
     <object-name>gearRLeg</object-name>
@@ -1028,24 +1756,24 @@
       <y> 0 </y>
       <z> 0 </z>
     </axis>
-	<interpolation>
-		<entry>
-		<ind> 0.0</ind>
-		<dep> -4.0</dep>
-		</entry>
-		<entry>
-		<ind> 0.01</ind>
-		<dep> -1.0</dep>
-		</entry>
-		<entry>
-		<ind> 1.0</ind>
-		<dep> 0.0</dep>
-		</entry>
-	</interpolation>
+	  <interpolation>
+		  <entry>
+		    <ind> 0.0</ind>
+		    <dep> -4.0</dep>
+		  </entry>
+		  <entry>
+		    <ind> 0.01</ind>
+		    <dep> -1.0</dep>
+		  </entry>
+		  <entry>
+		    <ind> 1.0</ind>
+		    <dep> 0.0</dep>
+		  </entry>
+	  </interpolation>
   </animation>
   
   
-<!-- gears -->
+<!-- Spin gears -->
 
   <animation>
     <type>spin</type>
@@ -1063,7 +1791,6 @@
       <z>  0 </z>
     </axis>
   </animation>
-
 
   <animation>
     <type>spin</type>
@@ -1099,7 +1826,6 @@
     </axis>
   </animation>
 
-
   <animation>
     <type>noshadow</type>
 	  <object-name>rotorBlade1Fblur</object-name>
@@ -1109,55 +1835,47 @@
 
   <!-- MFDS -->
 
-  <animation>
-<type>select</type>
-<object-name>IPV.ekran</object-name>
-  <condition>
-    <property>controls/switches/master-avionics</property>
-    <!-- <property>/controls/power/battery</property>
-    <equals>
-      <property>controls/mfd/mfdpage</property>
-      <value>2</value>
-    </equals> -->
-  </condition>
-</animation>
+<!-- <animation>
+        <type>pick</type>
+        <object-name>MFD_knob.001</object-name>
+        <visible>true</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>mm.brightnessP();</script>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>mfdbrtP</tooltip-id>
+                <label>Brightness+</label>
+            </binding>
+        </hovered>
+    </animation>
 
-<animation>
-        <type>material</type>
-        <object-name>IPV.ekran</object-name>
-        <emission>
-            <red>1.0</red>
-            <green>1.0</green>
-            <blue>1.0</blue>
-            <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
-            <!-- <factor-prop>controls/mfd/displays/brightness-mm</factor-prop> -->
-        </emission>
-</animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>MFD.screen</object-name>
-    <condition>
-      <property>controls/switches/master-avionics</property>
-      <!-- <property>/controls/power/battery</property>
-      <equals>
-        <property>controls/mfd/mfdpage</property>
-        <value>1</value>
-      </equals> -->
-    </condition>
-  </animation>
-
-<animation>
-        <type>material</type>
-        <object-name>MFD.screen</object-name>
-        <emission>
-            <red>1.0</red>
-            <green>1.0</green>
-            <blue>1.0</blue>
-            <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
-            <!-- <factor-prop>controls/mfd/displays/brightness-mm</factor-prop> -->
-        </emission>
-</animation>
+     <animation>
+        <type>pick</type>
+        <object-name>MFD_knob.002</object-name>
+        <visible>true</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>mm.brightnessP();</script>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>mfdbrtM</tooltip-id>
+                <label>Brightness-</label>
+            </binding>
+        </hovered>
+    </animation> -->
  
 
 	<model>
@@ -1165,7 +1883,7 @@
 	</model>
 
  
-    <model>
+  <model>
         <name>panel1</name>
         <path>Aircraft/Cavalon-915IS/Models/panel1.xml</path>
         <offsets>
@@ -1174,7 +1892,7 @@
             <z-m>0</z-m>
             <pitch-deg>0</pitch-deg>
         </offsets>
-    </model>
+  </model>
 
    <model>
     <name>pilot</name>
@@ -1185,6 +1903,20 @@
       <z-m>0.761837</z-m>
     </offsets>
   </model>
+
+<!-- Cranking -->
+
+  <model>
+    <path>Aircraft/Cavalon-915IS/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> 0.655016 </x-m>
+      <y-m>  0.12911 </y-m>
+      <z-m> 0.819347 </z-m>
+      <pitch-deg> 50 </pitch-deg>
+    </offsets>
+  </model>
+
+<!-- Lights -->
 
   <model>
     <path>Aircraft/Cavalon-915IS/Models/Effects/Lights/RedLight.xml</path>
@@ -1222,10 +1954,6 @@
     </offsets>
   </model>
 
-  <!-- <x-m> 0.38584 </x-m>
-      <y-m>  0.74758 </y-m>
-      <z-m>  0.495613 </z-m> -->
-
   <model>
     <path>Aircraft/Cavalon-915IS/Models/Effects/Lights/StrobeLight.xml</path>
     <offsets>
@@ -1253,6 +1981,35 @@
       <pitch-deg> -7.500 </pitch-deg>
       <heading-deg> 8 </heading-deg>
     </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.5</x-offset>
+			<y-offset>0.5</y-offset>
+			<z-offset>0.5</z-offset>
+			</animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/DR400/Models/light/TaxiLight.xml</path>
+    <offsets>
+      <x-m> -1.80585 </x-m>
+      <y-m>  0.348135 </y-m>
+      <z-m>  0.659006 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
+      <heading-deg> -8 </heading-deg>
+    </offsets>
+    <overlay>
+			<animation n="100">
+			<type>scale</type>
+			<property>constants/zero</property>
+			<x-offset>0.5</x-offset>
+			<y-offset>0.5</y-offset>
+			<z-offset>0.5</z-offset>
+			</animation>
+    </overlay>
   </model>
 
   <model>
@@ -1263,6 +2020,17 @@
       <z-m>  0.659006 </z-m>
       <pitch-deg> -7.500 </pitch-deg>
       <heading-deg> -8 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/DR400/Models/light/LandingLight.xml</path>
+    <offsets>
+      <x-m> -1.80585 </x-m>
+      <y-m>  -0.348135 </y-m>
+      <z-m>  0.659006 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
+      <heading-deg> 8 </heading-deg>
     </offsets>
   </model>
   

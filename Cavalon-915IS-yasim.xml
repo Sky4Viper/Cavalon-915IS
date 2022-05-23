@@ -2,138 +2,138 @@
 
 <!-- 
   
-Normal rotor speed is 400 rpm with a Vmax of 600 rpm, 
-and the blades have been tested up to 16-20 tons static tensile strength, 
-with a maximum centrifugal load of five tons at 300 rpm in a 3-G pull-up maneuver.
-
-Vne:	95 kts
-Max Cruise: 80 kts
-Economy Cruise:  70 kts
-Best Climb: 52 kts
-
-Rotor Diameter: 7 m (22 ft 11.5 in)
-Rotorblade Chord:180 mm (7 in)
-Fuselage Length: 3.5 m (11 ft 6 in)
-Height: 2.0 m 6 ft 7 in
-Wheel Track: 1.7 m (5 ft 7 in)
-Propeller Diameter: 1.2 m (4 ft)
-Rotor Disk Area: 38.5 sqm (414 sq.ft)
-Empty Weight: 167 kg (368 lbs)
-Gross Weight: 290 kg (639 lbs)
-Max Disc Loading: 7.5 kg/sqm (1.54 lbs/sq.ft)
-Max Power Loading: 3.9 kg/hp (8.5 lb/hp)
-Vne: 170 kmh (110 mph)	95 kts
-Max Cruise: 140 kmh (93 mph) 80 kts
-Economy Cruise: 120 kmh (81 mph)  70 kts
-Minimum Speed: 40 kmh (22 mph)
-Max ROC: 3 m/s (590 fpm)
-Service Ceiling (estimated): 4000 m (13000 ft)
-Takeoff Run 80 m (230 ft)
-Landing Run: 5 m (16 ft)
-Range: 250 km (150 miles)
-
-==============================
-Cavalon
-
-L x W x H: 4,6 m x 1,9 m x 2,8 m
-Empty weight: 275-305 kg
-MTOW: 450-560 kg
-Engine: Rotax 915 IS
-Takeoff distance: 90 m | 70 m | tbd
-Max endurance: 6,7 h | 6,3 h | tbd
-Max range: 610 km | 550 km | tbd
-Cruise speed: 140 km/h
-Max speed: 165 km/h
-Fuel capacity 100 ltr 
-
-
-
+Cavalon 915iS
+_____________________________________________________________________________________________________
 GENERAL SPECIFICATIONS
 
-Seats - Two/Side by Side
-Empty Weight - 710 -760lbs
-Max Takeoff Weight - 1235 lbs
-Maximum Pilot Weight - 242 lbs
-Useful Load - 475 -525 lbs
-
-==============================
+Seats: ....................................... Two/Side by Side
+Empty Weight: ................................ 760lbs (305 kg)
+Max Takeoff Weight: .......................... 1235 lbs (560 kg)
+Maximum Pilot Weight: ........................ 242 lbs
+Useful Load: ................................. 475 -525 lbs
+_____________________________________________________________________________________________________
 PERFORMANCE
 
-Max Speed - 120 mph
-Cruise Speed - 75-110 mph	
-Minimum Speed - 25 mph	
-Range - 380 sm @ 100 mph (+30 minute reserve) - 430 sm @ 87 mph (+30 minute reserve) - 470 sm @ 78 mph (+30 minute reserve)
-Maximum Climb Rate (MGTW) - 1000 ft/min 
-Service Ceiling - 12,000 feet
-Take off Roll (MGTW no wind) - 300 feet
-Landing Roll (no wind) - 60 feet
-Maximum Endurance - 6 hours + 30 minute reserve
+Max Speed: ................................... 120 mph
+Cruise Speed: ................................ 75-110 mph	
+Minimum Speed: ............................... 25 mph	
+Range (100 mph): ............................. 380 sm +30 minute reserve
+Range (87 mph): .............................. 430 sm +30 minute reserve
+Range (78 mph): .............................. 470 sm @  (+30 minute reserve)
+Maximum Climb Rate (MGTW): ................... 1000 ft/min 
+Service Ceiling: ............................. 12,000 feet
+Take off Roll (MGTW no wind): ................ 300 feet
+Landing Roll (no wind): ...................... 60 feet
+Maximum Endurance: ........................... 6 hours + 30 minute reserve
+_____________________________________________________________________________________________________
+AIRSPEEDS FOR SAFE OPERATION
 
-==============================
-FUEL
-
-Fuel Consumption - 3.5 – 7 gallons/ hour
-Fuel Type - Premium Automotive
-Fuel Tank Capacity - 25.9 gallons
-ENGINE
-
-Engine Option - Rotax 915iS
-Horsepower - 141
-Fire Warning System - Yes		
-
-==============================
-AVIONICS
-
-Standard - Analog Flight Instruments, Funkwerk ATR833 VHF Comm Radio, TRIG TT22 Transponder w/ ADS-B Out, Card Compass 
-Optional - Garmin Flight Deck Suites (Single G3X 10.6” Touch Display, Dual G3X 7” Touch Displays, G3X 10.6” & G3X 7” Touch Displays) ELT Kannad AF 406 Emergency Location Transmitter
-
-PRE-ROTATION & ROTORBLADE
-
-Pre-rotation Range - 200-320 RPM
-Pre-rotation Engagement - Electronically Initiated, Pneumatically Actuated
-Pre-rotation Protection - Yes
-Pre-rotation Interruptible - No
-Pre-rotation From Either Seat - Yes
-Rotor Type - NACA 8H12 extruded aluminum RSII TOPP 8.4m or 8.6m
-
-==============================
-WARRANTY
-
-Warranty of the Engine - As per Rotax (18 months / 200 hours)
-Warranty of Airframe - 200 hours / 12 months
-
-==============================
+V NE Never Exceed Speed: ..................... 195 km/h (120 mph, 105 KIAS)
+Climb ........................................ 116 km/h (70mph, 60KIAS) IAS
+Best rate of climb / best endurance .......... 100 km/h (60mph, 50KIAS) IAS
+Best range ................................... 110 km/h (70mph, 60KIAS ) IAS
+Approach ..................................... 100 km/h (60mph, 50KIAS) IAS
+_____________________________________________________________________________________________________
 DIMENSIONS
 
-Length - 15 feet 7 inches
-Height - 9 feet 1 inches
-Width - 5 feet 10 inches
-Rotor Diameter - 27 feet 7 inches / 28 feet 3 inches
-Airframe Construction Material - Composite / 4130 Chromoly Steel
-Hull - Composite Monocoque
-Tail - Carbon Fiber
-Propeller Material - Composite
-Power Outlet Voltage - 12 volt
-Nav/Strobe/Recognition Lights - Yes
-High Intensity Landing Light - Optional
+Length ....................................... 15 feet 7 inches (4,6 m)
+Height ....................................... 9 feet 1 inches (1,9 m)
+Width ........................................ 5 feet 10 inches (2,8 m)
+Rotor Diameter ............................... 27 feet 7 inches / 28 feet 3 inches
+Airframe Construction Material ............... Composite / 4130 Chromoly Steel
+Hull ......................................... Composite Monocoque
+Tail ......................................... Carbon Fiber
+Propeller Material ........................... Composite
+Power Outlet Voltage ......................... 12 volt
+Nav/Strobe/Recognition Lights ................ Yes
+High Intensity Landing Light ................. Optional (not implemented)
+_____________________________________________________________________________________________________
+WEIGHT
 
+Empty weight ................................. 760 lb
+Max take off weight .......................... 1235 lb
+Max pilot weight ............................. 242 lb
+Useful load .................................. 475 -525 lbs
+Engine weight ................................ 183.6 lb
+Propeller weight ............................. 27.6 lb
+Propeller+engine ............................. 211.2 lb
+_____________________________________________________________________________________________________
+ENGINE
+
+Engine Model: ................................ Rotax 915iS
+Weight: ...................................... 82.2 kg (lb 181.2)
+Propeller speed reduction gearbox: ........... i = 2,54 (0.39)
+Overload clutch: ............................. Yes
+Turbocharger: ................................ Yes
+Intercooler: ................................. Yes
+Exhaust system: .............................. Yes		
+Engine suspension frame: ..................... Yes
+External alternator: ......................... Yes
+Air guide hood: .............................. Yes
+Fuel pumps assy: ............................. Yes
+Fire Warning System: ......................... Yes
+_____________________________________________________________________________________________________
+FUEL
+
+Fuel Tank Capacity ........................... 100 l / 25.9 gal (155.5 lb)
+Fuel Consumption ............................. 3.5-7 gallons/ hour
+Fuel Type .................................... Premium Automotive (min. MON 85 RON 95 min. AKI 91, leaded, unleaded, AVGAS 100LL, Ethanol 10)
+_____________________________________________________________________________________________________
+ENGINE PERFORMANCE		
+Horsepower (max 5 min): ...................... 141 hp (104kW) -139BHP
+Horsepower (max continuous): ................. 135 hp (99.0kW) -133BHP
+Torque (5800 1/min): ......................... 121 Nm / 89 ft. lb.
+Torque (5500 1/min): ......................... 125 Nm / 92 ft. lb.
+Max RPM: ..................................... 5800 1/min.
+Engine speed at idle: ........................ 1800 rpm
+Displacement: ................................ 1352 cm³ (82.6 cu in)
+_____________________________________________________________________________________________________
+PRE-ROTATION & ROTORBLADE
+
+Pre-rotation Range ........................... 200-320 RPM
+Pre-rotation Engagement ...................... Electronically Initiated, Pneumatically Actuated
+Pre-rotation Protection ...................... Yes
+Pre-rotation Interruptible ................... No
+Pre-rotation From Either Seat ................ Yes
+Rotor Type ................................... NACA 8H12 extruded aluminum RSII TOPP 8.4m or 8.6m
+_____________________________________________________________________________________________________
+PROPELLER
+
+Propeller model .............................. KW-30
+Number of blades installed: .................. 3
+Blade type: .................................. 038 (“WA”)
+Diameter: .................................... 1950 (± 4mm)
+Min. angle setting: .......................... 5°
+Max. angle setting: .......................... 50°
+Max. engine power output, Nmax (HP / kW): .... 141 / 104
+Max. propeller RPM – nmax: ................... 2300
+Temperature Service Rate: .................... -25°C / +45°C
+Moment of mass inertia (kg m2): .............. 0.74
+Mass of complete propeller (kg): ............. ~ 12 kg (27.6 lb)
+Mass of Jihostroj governor (kg): ............. 0,90
+Maximum pitch change range: .................. +8° to +40° - measured at 75% radius station
+_____________________________________________________________________________________________________
+AVIONICS
+
+Standard: .................................... Analog Flight Instruments, Funkwerk ATR833 VHF Comm Radio, TRIG TT22 Transponder w/ ADS-B Out, Card Compass 
+Optional: .................................... Garmin Flight Deck Suites (Single G3X 10.6” Touch Display, Dual G3X 7” Touch Displays, G3X 10.6” & G3X 7” Touch Displays) ELT Kannad AF 406 Emergency Location Transmitter
 
 -->
 
-<airplane mass="710"> 
+<airplane mass="760" 
+          mtow-lb="1235"> 
 
-  <approach speed="60" aoa="0">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.60"/>
+  <approach speed="50" aoa="0">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
   </approach>
 
-  <cruise speed="65" alt="0">
+  <cruise speed="65" alt="6000">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
   </cruise>
 
-
   <rotor name="main" 
-	 x="0" y="0.0" z="2.6809"
-         nx="-0.0" ny="0" nz="1"  
+	       x="0.003893" y="0.0" z="2.6886"
+         nx="-0.0" ny="0" nz="1"
          fx="1" fy="0" fz="0"  ccw="1"
          maxcollective="0.0" mincollective="0.0"
          diameter="8.44"
@@ -141,8 +141,8 @@ High Intensity Landing Light - Optional
          weightperblade="18"
          twist="-4"
          chord="0.18"
-         rpm="600"
-         tiltcenterx="-0.2125" tiltcentery="0" tiltcenterz="1.1307"
+         rpm="400"
+         tiltcenterx="-0.079495" tiltcentery="0" tiltcenterz="2.57079"
          mintiltpitch=" 0" 
          maxtiltpitch="20"
          mintiltroll="-8" 
@@ -165,35 +165,31 @@ High Intensity Landing Light - Optional
          translift-maxfactor="1"
          ground-effect-constant="0.2"
          taper="1"
-	number-of-segments="8"
-	number-of-parts="8"
-	rel-len-where-incidence-is-measured="0.7"
-	rel-len-blade-start="0.025"
+	       number-of-segments="8"
+	       number-of-parts="8"
+	       rel-len-where-incidence-is-measured="0.7"
+	       rel-len-blade-start="0.025"
 	
-	
-		airfoil-lift-coefficient="6.3"
-		airfoil-drag-coefficient0="0.0075"
-		airfoil-drag-coefficient1="0.425"
-		airfoil-incidence-no-lift="-0.75"
-		incidence-stall-zero-speed="15"
-		incidence-stall-half-sonic-speed="14.5"
-		lift-factor-stall="0.18"
-		stall-change-over="10"
-		drag-factor-stall="2.0" 
+		     airfoil-lift-coefficient="6.3"
+		     airfoil-drag-coefficient0="0.0075"
+		     airfoil-drag-coefficient1="0.425"
+		     airfoil-incidence-no-lift="-0.75"
+		     incidence-stall-zero-speed="15"
+		     incidence-stall-half-sonic-speed="14.5"
+		     lift-factor-stall="0.18"
+		     stall-change-over="10"
+		     drag-factor-stall="2.0" 
 		 
-    cyclic-factor="0.8"
-    rotor-correction-factor="0.95"
-	  downwashfactor="0.0"
-    balance="0.99998"
-	 > 
+         cyclic-factor="0.8"
+         rotor-correction-factor="0.95"
+	       downwashfactor="0.0"
+         balance="0.99998" > 
          <control-input axis="/controls/flight/aileron-trim" control="TILTROLL" split="true" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
          <control-input axis="/controls/flight/aileron" control="TILTROLL" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
          <control-input axis="/controls/flight/elevator-trim" control="TILTPITCH" split="true" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
          <control-input axis="/controls/flight/elevator" control="TILTPITCH" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
 
- </rotor>
-
- 
+  </rotor>
 
   <rotorgear max-power-engine="2"
              max-power-rotor-brake="50"
@@ -201,154 +197,179 @@ High Intensity Landing Light - Optional
              engine-prop-factor="0.02" 
 	           engine-accel-limit="5"
              yasimdragfactor="30"
-             yasimliftfactor="140"
-	     >
-	<control-input axis="/controls/engines/engine[0]/starter" control="ROTORGEARENGINEON"/>
-	<control-input axis="/controls/rotor/brake" control="ROTORBRAKE"
+             yasimliftfactor="140" >
+
+	          <control-input axis="/controls/engines/engine[0]/starter" control="ROTORGEARENGINEON"/>
+	          <control-input axis="/controls/rotor/brake" control="ROTORBRAKE"
                  src0="0.0" src1="1.0"
                  dst0="0.0" dst1="1.0"/>
   </rotorgear>
   
+  <!-- http://www.buckarooshangar.com/flightgear/yasimtut_propeller.html Piston engine -->
  
-  <propeller x="-0.6356" y="0" z="1.2723"
-			 mass="0"
-             moment="0.1"
-             radius="0.8"
-             cruise-speed="65"
-             cruise-rpm="2800"
-             cruise-alt="2000"
-             cruise-power="50"
-             takeoff-power="55"
-             takeoff-rpm="3400"
-	     contra="1"
-	    
-	      >
-	<actionpt x="-0.953336" y="0" z="1.31428"/>
 
-	<piston-engine eng-power="141"
-                            eng-rpm="5800"
-                            displacement="82.6">
-		<control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
-		<control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
-		<control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
-		<control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-	</piston-engine>
+      <propeller x="-0.6356" y="0" z="1.2723"
+			       mass="211.2"
+             moment="-0.74"
+             radius="0.975"
+             max-rpm="2300"
+             min-rpm="1380"
+             fine-stop="0.05"
+             coarse-stop="3.0"
+             cruise-speed="75"
+             cruise-rpm="2180"
+             cruise-alt="6000"
+             cruise-power="133"
+             takeoff-power="139"
+             takeoff-rpm="2299"
+             gear-ratio="0.3965"
+             manual-pitch="1"
+	           contra="0" >
+
+	  <actionpt x="-0.953336" y="0" z="1.31428"/>
+
+<!-- 
+  piston-engine: A piston engine definition.  This must be a subelement of an enclosing <propeller> tag.
+  eng-power:    Maximum BHP of the engine at sea level.
+  eng-rpm:      The engine RPM at which eng-power is developed
+  displacement: The engine displacement in cubic inches.
+  compression:  The engine compression ratio.
+  turbo-mul:    The turbo/super-charger pressure multiplier. Static pressure will be multiplied by this value to get the manifold pressure.
+  wastegate-mp: The maximum manifold pressure.  Beyond this, the gate will release to keep the MP below this number. (inHG).
+                This value can be changed at runtime using the WASTEGATE control axis, which is a multiplier in the range [0:1].
+  turbo-lag:    Time lag, in seconds, for 90% of a power change to be reflected in the turbocharger boost pressure. 
+-->
+
+	  <piston-engine eng-power="139"
+                 eng-rpm="5800"
+                 displacement="82.5"
+                 compression:="8.1"
+                 wastegate-mp="51"
+                 turbo-mul="1.7" >
+	            	<control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+	            	<control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+	            	<control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+	            	<control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+                <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="PROPPITCH"/>
+                <control-input axis="/controls/engines/engine[0]/throttle" src0="0.96" dst0="0.0" src1="1.0" dst1="1.0" control="BOOST"/> 
+                <control-output control="BOOST" prop="/controls/engines/engine[0]/boost"/>
+                
+                
+	  </piston-engine>
+
   </propeller>
 
   
-  <cockpit x="0.2936" y="0" z="1.2649"/>
+  <cockpit x="0.2936" y="-0.235186" z="1.2649"/>
 
+  <fuselage ax="2.00571" ay="0" az="0.58262" bx="1.22088" by="0" bz="0.821511" 
+    width="0.9" taper="0" midpoint="1"/>
  
- <fuselage ax="2.00571" ay="0" az="0.58262" bx="1.22088" by="0" bz="0.821511" 
- width="0.9" taper="0" midpoint="1"/>
- 
- <fuselage ax="1.2855" ay="0" az="0.8338" bx="-0.4581" by="0" bz="1.1426" 
- width="1.28" taper="0.68" midpoint="0.5"/>
- 
-<fuselage ax="-0.381612" ay="0" az="1.1426" bx="-0.843585" by="0" bz="1.291"
- width="0.9" taper="0.4" midpoint="0"/>
+  <fuselage ax="1.2855" ay="0" az="0.8338" bx="-0.4581" by="0" bz="1.1426" 
+    width="1.28" taper="0.68" midpoint="0.5"/>
 
-  <fuselage ax="0.299761" ay="0" az="0.461949" bx="-2.333" by="0" bz="0.564772" 
- width="0.12" taper="0.9" midpoint="0.3"/>
+  <fuselage ax="-0.381612" ay="0" az="1.1426" bx="-0.843585" by="0" bz="1.291"
+    width="0.9" taper="0.4" midpoint="0"/>
+
+  <fuselage ax="0.048916" ay="0" az="0.775946" bx="-0.562983" by="0" bz="0.490733" 
+    width="0.56" taper="0.2" midpoint="0.12"/>
+
+  <!-- <fuselage ax="-0.562983" ay="0" az="0.490733" bx="-2.333" by="0" bz="0.564772" 
+    width="0.12" taper="0.9" midpoint="0.3"/> -->
 
   
   <hstab x="-2.0943" y="0.0" z="0.601065"
          taper="0.82"
-         length="0.791"
+         length="0.736"
          chord="0.5"
          sweep="5"
-	 dihedral = "0"
-	  >
-	<stall aoa="14" width="4" peak="1.5"/>
-         
+	       dihedral = "0" >
+
+	      <stall aoa="14" width="4" peak="1.5"/>  
   </hstab>
+
 
   <vstab x="-2.0943" y="0.0" z="0.601065"
          chord="0.6"
          length="0.77"
          taper="0.6" 
          sweep="5"
-         incidence="0"	>
+         incidence="0" >
          <stall aoa="16" width="4" peak="1.5"/>
          <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </vstab>
-
-
  
-  <vstab x="-2.1633" y="0.791" z="0.601429"
+  <vstab x="-2.1633" y="0.736" z="0.601429"
          chord="0.4"
          length="0.56"
          taper=".74"
          sweep="6"
          incidence="0"
-	 dihedral = "90"
-	  >
+	       dihedral = "86" >
   </vstab>
   
-  <vstab x="-2.1633" y="-0.791" z="0.601429"
+  <vstab x="-2.1633" y="-0.736" z="0.601429"
          chord="0.4"
          length="0.56"
          taper=".74"
          sweep="6"
          incidence="0"
-	 dihedral = "90"
-	  >
+	       dihedral = "94" >
+  </vstab>
+
+  <vstab x="-0.279" y="0" z="1.458"
+         chord="0.8"
+         length="0.92"
+         taper=".38"
+         sweep="-12"
+         incidence="0"
+	       dihedral = "90" >
   </vstab>
  
  
- 
-  <gear x="1.624" y="0.000" z="0.03612" 
-	compression="0.142">
+  <gear x="1.624" y="0.000" z="0.0362" 
+	      compression="0.12">
         <control-input axis="/controls/flight/rudder" control="STEER" square="false" src0="-1.0" src1="1.0" dst0="-0.3" dst1="0.3"/>
         <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   </gear>
 
-
-  <gear x="-0.377128" y="0.747196" z="-0.0067"  	
-	compression="0.142">
+  <gear x="-0.377128" y="0.747196" z="-0.0058"  	
+	      compression="0.17" >
         <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   </gear>
 
-  <gear x="-0.377128" y="-0.747196" z="-0.0067"  	
-	compression="0.142">
+  <gear x="-0.377128" y="-0.747196" z="-0.0058"  	
+	      compression="0.17" >
         <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   </gear>
 
 
-  <!-- tail gear 
-  <gear x="-1.24400" y="0.000" z="-0.6628"
-		compression="0.051"
-        ignored-by-solver="1" >
-  </gear>-->
+  <weight x="1.624" y="0.000" z="0.0363"    mass-prop="/sim/weight[0]/weight-lb"/>
+  <weight x="-0.377128" y="0.747196" z="-0.0057"    mass-prop="/sim/weight[1]/weight-lb"/>
+  <weight x="-0.377128" y="-0.747196" z="-0.0057"     mass-prop="/sim/weight[2]/weight-lb"/>
 
 
-<weight x="1.624" y="0.000" z="0.3128"    mass-prop="/sim/weight[0]/weight-lb"/>
-<weight x="-0.377128" y="0.747196" z="0.344303"    mass-prop="/sim/weight[1]/weight-lb"/>
-<weight x="-0.377128" y="-0.747196" z="0.344303"     mass-prop="/sim/weight[2]/weight-lb"/>
-
-
-
- <tank x="-0.2772" y="0.0" z="1.17564" capacity="155.5"/>
+  <tank x="-0.2772" y="0.0" z="1.10125" capacity="155.5"/>
  
- <ballast  x="1.0" y="0.0" z="0.900759" mass="20"/>
+  <ballast  x="1.0" y="0.0" z="0.900759" mass="144"/>
 
- <ballast x="1.0" y="0.3" z="1.30076" mass="50"/>
- <ballast x="1.0" y="-0.3" z="1.30076" mass="50"/>
+  <ballast x="1.0" y="0.3" z="1.30076" mass="65"/>
+  <ballast x="1.0" y="-0.3" z="1.30076" mass="65"/>
  
- <ballast x="1.0" y="0.3" z="0.500759" mass="50"/>
- <ballast x="1.0" y="-0.3" z="0.500759" mass="50"/>
+  <ballast x="1.0" y="0.3" z="0.500759" mass="70"/>
+  <ballast x="1.0" y="-0.3" z="0.500759" mass="70"/>
  
- <ballast x="-1.0" y="0.3" z="1.30076" mass="50"/>
- <ballast x="-1.0" y="-0.3" z="1.30076" mass="50"/>
+  <ballast x="-1.0" y="0.3" z="1.30076" mass="3"/>
+  <ballast x="-1.0" y="-0.3" z="1.30076" mass="3"/>
  
- <ballast x="-1.0" y="0.3" z="0.500759" mass="50"/>
- <ballast x="-1.0" y="-0.3" z="0.500759" mass="50"/>
+  <ballast x="-1.0" y="0.3" z="0.500759" mass="50"/>
+  <ballast x="-1.0" y="-0.3" z="0.500759" mass="50"/>
 
 
 </airplane>

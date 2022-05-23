@@ -650,6 +650,7 @@ var MM = {
 		}
 
 		me.liveMap = getprop("controls/mfd/displays/live-map");
+		me.gpsON = getprop("instrumentation/gps/serviceable");
 		me.zoomed = zoom != last_zoom;
 		if(me.center_tile_int[0] != last_tile[0] or me.center_tile_int[1] != last_tile[1] or type != last_type or me.zoomed or me.liveMap != lastLiveMap or lastDay != me.day)  {
 			for(var x = 0; x < num_tiles[0]; x += 1) {
@@ -689,7 +690,8 @@ var MM = {
 					          				tile.set("src", "Aircraft/Cavalon-915IS/Models/Instruments/MFD/emptyTile.png");
 					      					tile.update();
 					      					});
-					    } elsif (io.stat(img_path) != nil) {# cached image found, reusing
+						
+						} elsif (io.stat(img_path) != nil) {# cached image found, reusing
 					      	#print('loading ' ~ me.img_path);
 					      	tile.set("src", img_path);
 					      	tile.update();

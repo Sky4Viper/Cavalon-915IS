@@ -5,7 +5,7 @@
   <sim>
     <description>Cavalon-915IS Autogyro (YASim)</description>
     <author>Sergei "Skydive" Solyshko</author>
-    <status>Beta 0.90</status>
+    <status>Alpha 0.80</status>
      <rating>
     <FDM type="int">5</FDM>
     <systems type="int">3</systems>
@@ -33,6 +33,26 @@
         		<type>exterior</type>
         		<splash type="bool">false</splash>
         		<path>gui/Previews/screen4.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/screen5.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/screen6.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/screen7.png</path>
+			</preview>
+			<preview>
+        		<type>exterior</type>
+        		<splash type="bool">false</splash>
+        		<path>gui/Previews/screen8.png</path>
 			</preview>
 		</previews>
   

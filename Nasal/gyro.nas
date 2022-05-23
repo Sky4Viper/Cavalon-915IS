@@ -46,12 +46,17 @@ var instrument_lights = func {
 	
 	if(mags!=nil and mags>0)
 	{
-		setprop("/systems/electrical/outputs/instrument-lights-norm", 20);
+		#setprop("/systems/electrical/outputs/instrument-lights-norm", 10);
+		#setprop("/systems/electrical/outputs/panel-lights-norm", 10);
+		#setprop("/systems/electrical/outputs/panel-lights-norm", 1);
+		setprop("/controls/electric/engine/generator", 1);
 		#screen.log.write("lights on !!!", 1, 0, 0);
 	}
 	else
 	{
 		setprop("/systems/electrical/outputs/instrument-lights-norm", 0);
+		setprop("/systems/electrical/outputs/panel-lights-norm", 0);
+		setprop("/controls/electric/engine/generator", 0);
 		#screen.log.write("lights off !!!", 1, 0, 0);
 	}
 
@@ -76,7 +81,7 @@ var check_g_load = func {
 
 var	check_vne_structure = func {
 	var kias = getprop("velocities/airspeed-kt");
-	if(kias!=nil and kias>120){
+	if(kias!=nil and kias>105){
 		screen.log.write("VNE exceeded !!!", 1, 0, 0);
 	}
 }
@@ -137,7 +142,7 @@ var engine_values = func {
 		eoilt0 = (echt0*0.405);
 
 	
-	var eoilp0=((1*rev0)/(0.01+(eoilt0*0.082))*0.215);
+	var eoilp0=((0.2*rev0)/(0.01+(eoilt0*0.082))*0.215);
 
 	if (eoilp0 > 130) {
 	setprop("/engines/engine[0]/oil-pressure-psi", 130);

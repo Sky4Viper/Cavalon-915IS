@@ -3,8 +3,10 @@
 <PropertyList>
 
   <chase-distance-m type="double" archive="y">-10.0</chase-distance-m>
+
+  
  
- <view n="100">
+  <view n="100">
     <name>Mast Camera View</name>
     <type>lookfrom</type>
     <internal archive="y">true</internal>
@@ -15,6 +17,23 @@
       <z-offset-m archive="y"> -0.0038 </z-offset-m> <!--Back-->
       <default-field-of-view-deg type="double">95</default-field-of-view-deg>
       <pitch-offset-deg>-25</pitch-offset-deg>
+    </config>
+  </view>
+
+  <view n="101">
+    <name>Passanger Seat View</name>
+    <internal archive="y">true</internal>
+    <type>lookfrom</type>
+    <config>
+      <from-model type="bool">true</from-model>
+      <!-- <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m> -->
+      <x-offset-m archive="y">  -0.235186 </x-offset-m> <!-- Right -->
+      <y-offset-m archive="y">  1.27422 </y-offset-m> <!-- Up    -->
+      <z-offset-m archive="y"> -0.199179 </z-offset-m> <!-- Back  -->
+      <pitch-offset-deg> -14 </pitch-offset-deg>
+      <heading-offset-deg> -8 </heading-offset-deg>
+      <default-field-of-view-deg>37</default-field-of-view-deg>
+      <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
 	
@@ -28,8 +47,8 @@
       <x-offset-m archive="y">  0.235186 </x-offset-m>	<!--right-->
       <y-offset-m archive="y">  1.27422 </y-offset-m>	<!--up-->
       <z-offset-m archive="y"> -0.199179 </z-offset-m>	<!--back 0.553-->
-      <pitch-offset-deg> 0 </pitch-offset-deg>
-      <default-field-of-view-deg> 76 </default-field-of-view-deg>
+      <pitch-offset-deg> -2 </pitch-offset-deg>
+      <default-field-of-view-deg> 75 </default-field-of-view-deg>
     </config>
   </view>
 

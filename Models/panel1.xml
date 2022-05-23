@@ -113,6 +113,7 @@
     </model>
 
     <model>
+
     <name>Magneto</name>
         <path>Aircraft/Cavalon-915IS/Models/Instruments/magneto.xml</path>
         <offsets>
@@ -120,6 +121,28 @@
             <y-m>-0.054248</y-m>
             <z-m>0.815001</z-m>
                <pitch-deg>-23.7</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+    <name>GarminG3MFDright</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/MFD/G3_mfd1.xml</path>
+        <offsets>
+			<x-m>-1.23551</x-m>
+            <y-m>0.149921</y-m>
+            <z-m>0.981145</z-m>
+               <pitch-deg>-23.8</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+    <name>GarminG3MFDleft</name>
+        <path>Aircraft/Cavalon-915IS/Models/Instruments/MFD/G3_mfd2.xml</path>
+        <offsets>
+			<x-m>-1.23551</x-m>
+            <y-m>-0.149921</y-m>
+            <z-m>0.981145</z-m>
+               <pitch-deg>-23.8</pitch-deg>
         </offsets>
     </model>
 

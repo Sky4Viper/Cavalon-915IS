@@ -4,18 +4,21 @@
 
  <path>comp.ac</path>
 
- <!--
+ 
    <animation>
         <type>material</type>
         <object-name>Ring</object-name>
         <emission>
-            <red>0.05</red>
+            <!-- <red>0.05</red>
             <green>0.02</green>
-            <blue>0.01</blue>
+            <blue>0.01</blue> -->
+            <red>   0.25 </red>
+            <green> 0.25 </green>
+            <blue>  0.25 </blue>
             <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
         </emission>
     </animation>
-	-->
+
  <animation>
   <type>rotate</type>
   <object-name>Ring</object-name>

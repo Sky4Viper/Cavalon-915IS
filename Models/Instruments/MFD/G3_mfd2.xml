@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>G3_mfd2.ac</path>
+
+<!-- 
+g3_case
+g3_button.001-004
+g3_knob.001
+g3_knob.002
+g3_screws
+g3_msgbars
+IPV.ekran
+MFD.screen
+ -->
+
+ <!-- MFD Pages -->
+
+   <animation>
+    <type>select</type>
+    <object-name>MFD.screen</object-name>
+    <object-name>g3_msgbars</object-name>
+    <condition>
+      <property>controls/switches/master-avionics</property>
+      <!-- <property>/controls/power/battery</property>
+      <equals>
+        <property>controls/mfd/mfdpage</property>
+        <value>1</value>
+      </equals> -->
+    </condition>
+  </animation>
+
+<!-- Materials -->
+
+<!-- <effect>
+  <inherits-from>Aircraft/Cavalon-915IS/Models/Effects/cavalon_interior</inherits-from>
+  <object-name>g3_case</object-name>
+  <object-name>g3_button.001</object-name>
+  <object-name>g3_button.002</object-name>
+  <object-name>g3_button.003</object-name>
+  <object-name>g3_button.004</object-name>
+  <object-name>g3_knob.001</object-name>
+  <object-name>g3_knob.002</object-name>
+</effect> -->
+
+<animation>
+        <type>material</type>
+        <object-name>MFD.screen</object-name>
+        <object-name>g3_msgbars</object-name>
+        <emission>
+            <red>0.3</red>
+            <green>0.3</green>
+            <blue>0.3</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+            <!-- <factor-prop>controls/mfd/displays/brightness-mm</factor-prop> -->
+        </emission>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>g3_button.001</object-name>
+  <object-name>g3_button.002</object-name>
+  <object-name>g3_button.003</object-name>
+  <object-name>g3_button.004</object-name>
+        <emission>
+        <red>0.25</red>
+        <green>0.25</green>
+        <blue>0.25</blue>
+            <factor-prop>/systems/electrical/outputs/panel-lights-norm</factor-prop>
+        </emission>
+        <condition>
+          <property>/systems/electrical/outputs/panel-lights</property>
+        </condition>
+ </animation>
+
+  <!-- Buttons -->
+
+  <animation>
+    <type>translate</type>
+    <object-name>g3_button.001</object-name>
+    <property>cavalon-915is/mfd1/buttons/btn.001</property>
+    <factor>-0.0019</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>g3_button.002</object-name>
+    <property>cavalon-915is/mfd1/buttons/btn.002</property>
+    <factor>-0.0019</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>g3_button.003</object-name>
+    <property>cavalon-915is/mfd1/buttons/btn.003</property>
+    <factor>-0.0019</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>g3_button.004</object-name>
+    <property>cavalon-915is/mfd1/buttons/btn.004</property>
+    <factor>-0.0019</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- Knobs -->
+
+  <animation>
+ <type>knob</type>
+ <object-name>g3_knob.001</object-name>
+ <action>
+        <binding>
+          <command>property-adjust</command>
+          <property>/systems/electrical/outputs/instrument-lights-norm</property>
+          <factor>1</factor>
+          <min>1.0</min>
+          <max>10</max>
+          <wrap>false</wrap>
+        </binding>
+  </action>
+  <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>instruments-lights-adj</tooltip-id>
+                <label>Instruments lights</label>
+        </binding>
+  </hovered>
+</animation>
+
+<animation>
+ <type>knob</type>
+ <object-name>g3_knob.002</object-name>
+  <action>
+        <binding>
+          <command>property-adjust</command>
+          <property>/systems/electrical/outputs/panel-lights-norm</property>
+          <factor>1</factor>
+          <min>1.0</min>
+          <max>10</max>
+          <wrap>false</wrap>
+        </binding>
+  </action>
+  <hovered>
+        <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>panel-lights-adj</tooltip-id>
+                <label>Panel lights</label>
+        </binding>
+  </hovered>
+</animation>
+
+
+
+</PropertyList>

@@ -17,11 +17,17 @@
     <object-name>key</object-name>
     <object-name>magsw</object-name>
     <emission>
-      <red>   0.07500 </red>
+      <!-- <red>   0.07500 </red>
       <green> 0.01500 </green>
-      <blue>  0.00001 </blue>
-      <factor-prop>/sim/model/material/instruments/factor</factor-prop>
+      <blue>  0.00001 </blue> -->
+      <red>0.015</red>
+      <green>0.015</green>
+      <blue>0.015</blue>
+      <factor-prop>/systems/electrical/outputs/panel-lights-norm</factor-prop>
     </emission>
+    <condition>
+          <property>/systems/electrical/outputs/panel-lights</property>
+    </condition>
   </animation>
 
   <!--		magneto switch		-->
@@ -59,6 +65,16 @@
         <step>3</step>
         <min>0</min>
         <max>3</max>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/systems/electrical/outputs/panel-lights-norm</property>
+        <value>2.0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/systems/electrical/outputs/instrument-lights-norm</property>
+        <value>2.0</value>
       </binding>
       <binding>
         <command>nasal</command>

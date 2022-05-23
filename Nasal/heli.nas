@@ -40,7 +40,7 @@ var check_gear = func{
 	
 	if (rotrpm<450) 
 	{
-		var wght = 70;
+		var wght = 80;
 		
 		#scale weight depending on airspeed
 		#important if sliding forward on the ground

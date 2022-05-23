@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <path>Main_Panel.ac</path>
+    
+	<!-- Submodels -->
+
+  <anaimation>
+    <object-name>InstrumentsPnl</object-name>
+  </anaimation>
+
+  <!-- <animation>
+    <type>material</type>
+  <emission>
+      <red>0.01</red>
+      <green>0.01</green>
+      <blue>0.01</blue>
+      <factor-prop>/systems/electrical/outputs/panel-lights-norm</factor-prop>
+  </emission>
+  </animation> -->
+
+  <effect>
+    <name>Cavalon-915IS-interior</name>
+    <inherits-from>Aircraft/Cavalon-915IS/Models/Effects/cavalon_panel</inherits-from>
+    <object-name>InstrumentsPnl</object-name>
+  </effect>
+
+</PropertyList>
