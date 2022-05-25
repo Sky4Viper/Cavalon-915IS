@@ -17,18 +17,6 @@
       <internal-format>normalized</internal-format>
     </texture>
 
-    <!-- <texture n="4">
-	    <type>cubemap</type>
-	    <images>
-		      <positive-x>Aircraft/Cavalon-915IS/Models/Effects/Interior/0004.png</positive-x>
-          <negative-x>Aircraft/Cavalon-915IS/Models/Effects/Interior/0002.png</negative-x>
-          <positive-y>Aircraft/Cavalon-915IS/Models/Effects/Interior/0001.png</positive-y>
-          <negative-y>Aircraft/Cavalon-915IS/Models/Effects/Interior/0003.png</negative-y>
-          <positive-z>Aircraft/Cavalon-915IS/Models/Effects/Interior/0006.png</positive-z>
-          <negative-z>Aircraft/Cavalon-915IS/Models/Effects/Interior/0005.png</negative-z> 
-      </images>
-	  </texture>
-
     <opacity-cube-center type="vec3d" n="0"> -0.199179 0.0 1.27422</opacity-cube-center>
     <opacity-cube-scale type="vec3d" n="0"> 1.449 0.693 0.862</opacity-cube-scale>
     <opacity-cube-angle type="float">0.0</opacity-cube-angle> -->
@@ -36,12 +24,12 @@
     <texture n="4">
 	    <type>cubemap</type>
 	    <images>
-          <positive-x>Aircraft/Cavalon-915IS/Models/Effects/Interior2/0004.png</positive-x>
-          <negative-x>Aircraft/Cavalon-915IS/Models/Effects/Interior2/0002.png</negative-x>
-          <positive-y>Aircraft/Cavalon-915IS/Models/Effects/Interior2/0001.png</positive-y>
-          <negative-y>Aircraft/Cavalon-915IS/Models/Effects/Interior2/0003.png</negative-y>
-          <positive-z>Aircraft/Cavalon-915IS/Models/Effects/Interior2/0006.png</positive-z>
-          <negative-z>Aircraft/Cavalon-915IS/Models/Effects/Interior2/0005.png</negative-z> 
+          <positive-x>Aircraft/Cavalon-915IS/Models/Effects/Interior/0004.png</positive-x>
+          <negative-x>Aircraft/Cavalon-915IS/Models/Effects/Interior/0002.png</negative-x>
+          <positive-y>Aircraft/Cavalon-915IS/Models/Effects/Interior/0001.png</positive-y>
+          <negative-y>Aircraft/Cavalon-915IS/Models/Effects/Interior/0003.png</negative-y>
+          <positive-z>Aircraft/Cavalon-915IS/Models/Effects/Interior/0006.png</positive-z>
+          <negative-z>Aircraft/Cavalon-915IS/Models/Effects/Interior/0005.png</negative-z> 
       </images>
 	  </texture>
 

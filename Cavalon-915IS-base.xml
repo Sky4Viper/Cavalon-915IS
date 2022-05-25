@@ -4,7 +4,7 @@
 
   <sim include="Cavalon-915IS_views.xml">
   
-    <fuel-fraction>1.0</fuel-fraction>
+    <fuel-fraction>0.7</fuel-fraction>
         
   
     <startup>
@@ -64,16 +64,87 @@
 				    <type>int</type>
 				    <property type="string">/rotors/main/rpm</property>
 				</signal>
-				
+
 				<signal>
 					<type>double</type>
 					<property type="string">/rotors/main/tilt/roll-deg</property>
 				</signal>
-				
+
 				<signal>
 					<type>double</type>
 					<property type="string">/rotors/main/tilt/pitch-deg</property>
 				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>sim/model/door-positions/crew/position-norm</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>sim/model/door-positions/passenger/position-norm</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>controls/switches/master-avionics</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>sim/model/lights/taxi-lights</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>sim/model/lights/landing-lights</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>sim/model/lights/nav-lights</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>sim/model/lights/strobe-lights</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>/sim/weight[3]/weight-lb</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>/sim/weight[4]/weight-lb</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>/systems/electrical/outputs/instrument-lights-norm</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>/systems/electrical/outputs/panel-lights-norm</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>/systems/electrical/outputs/instrument-lights</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>/systems/electrical/outputs/panel-lights</property>
+				</signal>
+
+        <signal>
+					<type>double</type>
+					<property>sim/multiplay/generic/float[2]</property>
+				</signal>
+
 			</config>	
 	</flight-recorder>  
 	
@@ -172,6 +243,21 @@
 			<max-lb>100</max-lb>
 		</weight>
 
+       <!-- Crew  -->
+   <weight n="3">
+   <name type="string">Pilot</name>
+   <weight-lb alias="/yasim/cavalon915is/pilot-lb"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">210.0</max-lb>
+  </weight>
+
+  <weight n="4">
+   <name type="string">Co-Pilot</name>
+   <weight-lb alias="/yasim/cavalon915is/co-pilot-lb"/>
+   <min-lb type="double">0.0</min-lb>
+   <max-lb type="double">210.0</max-lb>
+  </weight>
+
 		
   <menubar>
         <default>
@@ -185,26 +271,26 @@
                         <script>aircraft.livery.dialog.toggle()</script>
                     </binding>
                 </item>
-		
-		
+                <item>
+                    <label>Enable co-pilot</label>
+                      <binding>
+                          <command>property-cycle</command>
+                          <property>/sim/weight[4]/weight-lb</property>
+                          <value>170.0</value>
+                          <value>0.0</value>
+                      </binding>
+                </item>
             </menu>
         </default>
     </menubar>
-
-   <!-- Payload  -->
-   <weight>
-   <name type="string">Pilot</name>
-   <weight-lb alias="/yasim/cavalon915is/pilot-lb"/>
-   <min-lb type="double">0.0</min-lb>
-   <max-lb type="double">210.0</max-lb>
-  </weight> 
   
 
   </sim>
 
   <yasim>
     <cavalon915is>
-	  <pilot-lb>180.0</pilot-lb>
+	    <pilot-lb>175.0</pilot-lb>
+      <co-pilot-lb>0.0</co-pilot-lb>
     </cavalon915is>
   </yasim>
 
@@ -219,7 +305,8 @@
     <engines>
       <engine n="0">
         <magnetos>0</magnetos>
-        <propeller-pitch type="double">0.52</propeller-pitch>
+        <propeller-pitch type="double">0.5</propeller-pitch>
+        <mixture type="double">0.7</mixture>
       </engine>
     </engines>
 
@@ -250,8 +337,9 @@
     </ventilation>
 
     <mfd>
-      		<mfdpage type="double">0</mfdpage>
-      		<hdgbugset type="double">0</hdgbugset>
+      		<mfd1page type="double">3</mfd1page>
+          <mfd2page type="double">0</mfd2page>
+      		<!-- <hdgbugset type="double">0</hdgbugset> -->
       		<displays>
         		<live-map type="bool">true</live-map>
         		<scale type="double">0</scale>
@@ -284,7 +372,7 @@
     </gps>
 
     <enav>
-			<selected type="int">3</selected>
+			<selected type="int">0</selected>
 		</enav>
 
 		<efis>
@@ -292,7 +380,7 @@
 				<display-mode type="string">FUEL</display-mode>
 			</ecam>
 			<mfd>
-				<display-mode type="string">VOR</display-mode>
+				<display-mode type="string">MAP</display-mode>
 				<display-mode-knob type="int">2</display-mode-knob>
 				<display-range type="int">40</display-range>
 			</mfd>

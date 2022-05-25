@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>co-pilot.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>tete</object-name>
+    <object-name>casque</object-name>
+    <object-name>jacks</object-name>
+    <object-name>corps</object-name>
+    <object-name>brasG</object-name>
+    <object-name>brasD</object-name>
+    <object-name>avantbrasG</object-name>
+    <object-name>avantbrasD</object-name>
+    <object-name>manche</object-name>
+    <object-name>cuisseG</object-name>
+    <object-name>cuisseD</object-name>
+    <object-name>jambeG</object-name>
+    <object-name>jambeD</object-name>
+    <object-name>piedG</object-name>
+    <object-name>piedD</object-name>
+    <type>select</type>
+    <condition>
+      <!-- <not><property>sim/current-view/internal</property></not> -->
+      <greater-than>
+        <property>/yasim/cavalon915is/co-pilot-lb</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <name>AnimeTete</name>
+    <object-name>tete</object-name>
+    <object-name>casque</object-name>
+  </animation>
+
+<!-- *** LoD *** -->
+  <animation> 
+    <type>range</type>
+    <min-m>1</min-m>
+    <max-m>10000</max-m>
+  </animation>
+
+</PropertyList>

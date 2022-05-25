@@ -21,7 +21,7 @@
   </view>
 
   <view n="101">
-    <name>Passanger Seat View</name>
+    <name>Co-Pilot View</name>
     <internal archive="y">true</internal>
     <type>lookfrom</type>
     <config>
@@ -30,9 +30,9 @@
       <x-offset-m archive="y">  -0.235186 </x-offset-m> <!-- Right -->
       <y-offset-m archive="y">  1.27422 </y-offset-m> <!-- Up    -->
       <z-offset-m archive="y"> -0.199179 </z-offset-m> <!-- Back  -->
-      <pitch-offset-deg> -14 </pitch-offset-deg>
-      <heading-offset-deg> -8 </heading-offset-deg>
-      <default-field-of-view-deg>37</default-field-of-view-deg>
+      <pitch-offset-deg> -15 </pitch-offset-deg>
+      <heading-offset-deg> -15 </heading-offset-deg>
+      <default-field-of-view-deg>38</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>

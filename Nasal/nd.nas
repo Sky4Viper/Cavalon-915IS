@@ -21,17 +21,17 @@ var nd_display = {};
 
       var myCockpit_switches = {
     # symbolic alias : relative property (as used in bindings), initial value, type
-    'toggle_range':         {path: '/inputs/range-nm', value:20, type:'INT'},
+    'toggle_range':         {path: '/inputs/range-nm', value:40, type:'INT'},
     'toggle_weather':       {path: '/inputs/wxr', value:0, type:'BOOL'},
     'toggle_airports':      {path: '/inputs/arpt', value:1, type:'BOOL'},
     'toggle_stations':      {path: '/inputs/sta', value:1, type:'BOOL'}, # show/hide stations (VOR/DME/NDB)
     'toggle_waypoints':     {path: '/inputs/wpt', value:0, type:'BOOL'}, # display way points (fixes) on the map
     'toggle_position':      {path: '/inputs/pos', value:0, type:'BOOL'}, # currently unused
     'toggle_data':          {path: '/inputs/data',value:1, type:'BOOL'}, # display way point data on the map
-    'toggle_terrain':       {path: '/inputs/terr',value:0, type:'BOOL'}, # currently unused
+    'toggle_terrain':       {path: '/inputs/terr',value:1, type:'BOOL'}, # currently unused
     'toggle_traffic':       {path: '/inputs/tfc',value:1, type:'BOOL'}, # display TCAS data
-    'toggle_centered':      {path: '/inputs/nd-centered',value:1, type:'BOOL'},
-    'toggle_lh_vor_adf':    {path: '/inputs/lh-vor-adf',value:1, type:'INT'},
+    'toggle_centered':      {path: '/inputs/nd-centered',value:0, type:'BOOL'},
+    'toggle_lh_vor_adf':    {path: '/inputs/lh-vor-adf',value:0, type:'INT'},
     'toggle_rh_vor_adf':    {path: '/inputs/rh-vor-adf',value:0, type:'INT'},
     'toggle_display_mode':  {path: '/mfd/display-mode', value:'VOR', type:'STRING'},#VOR, APP, PLAN
     'toggle_display_type':  {path: '/mfd/display-type', value:'LCD', type:'STRING'},
