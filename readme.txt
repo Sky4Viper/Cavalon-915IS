@@ -6,7 +6,7 @@ Tested on FG v2020.3.13.
 
 Author: Sergei "Skydive" Solyshko
 
-Based on JT-5B by Edin Hozic AKA mr_no (edinhozic@hotmail.com)
+Based on JT-5B by Edin Hozic AKA mr_no
 
 INTRODUCTION
 The Autogyro Cavalon is a German autogyro, designed and produced by AutoGyro GmbH of Hildesheim.
