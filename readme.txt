@@ -1,4 +1,5 @@
-﻿
+﻿img src=https://github.com/Sky4Viper/Cavalon-915IS/master/splash.png alt=Cavalon-915iS_splashscreen>
+ 
 Cavalon 915iS (autgyro)
 For FlightGear   
 Release 0.80 (Alpha) 
