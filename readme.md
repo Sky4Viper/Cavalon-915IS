@@ -1,6 +1,6 @@
 # Cavalon 915iS (autgyro)
 
-<img src=https://github.com/Sky4Viper/Cavalon-915IS/blob/master/splash.png alt=Cavalon-915iS_splashscreen><br>
+<img src=https://github.com/Sky4Viper/Cavalon-915IS/blob/main/gui/Previews/screen3.png alt=Cavalon-915iS_splashscreen><br>
  
 Cavalon 915iS is an addon aircraft (autgyro/gyrocopter/gyroplane) for FlightGear flight simulator. <br>
 
