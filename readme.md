@@ -16,7 +16,6 @@ The aircraft is supplied as a complete ready-to-fly-aircraft
   <li><b>Max Takeoff Weight:</b> .......................... 1235 lbs (560 kg)</li>
   <li><b>Max Speed:</b> ................................... 120 mph</li>
   <li><b>Cruise Speed:</b> ................................ 75-110 mph</li>
-  <li><b>Cruise Speed:</b> ................................ 75-110 mph</li>
   <li><b>Range (100 mph):</b> ............................. 380 sm +30 minute reserve</li>
   <li><b>Service Ceiling:</b> ............................. 12,000 feet</li>
   <li><b>Engine Model:</b> ................................ Rotax 915iS (141 hp / 104kW)</li>
